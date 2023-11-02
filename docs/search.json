@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome to my Warmup Website! It serves an example site for students in CSC 324 at Georgetown College, who are building their own website using the Quarto framework.\nYou can read a bit about me here.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome to my Warmup Website! It serves an example site for myself for CSC 324 at Georgetown College, as a warm up building your own website using the Quarto framework.\nYou can read a bit about me here.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "about.html",
