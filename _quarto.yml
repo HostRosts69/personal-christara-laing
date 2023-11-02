@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "warmup-christara-laing"
@@ -14,6 +15,9 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+
+
+
 
 
 
