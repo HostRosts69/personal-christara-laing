@@ -4,6 +4,7 @@ project:
 
 website:
   title: "warmup-christara-laing"
+  image: Untitled.png
   navbar:
     left:
       - href: index.qmd

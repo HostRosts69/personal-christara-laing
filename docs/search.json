@@ -39,14 +39,14 @@
     "href": "articles/article_01.html",
     "title": "Chapter 4:Reversing an Array",
     "section": "",
-    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))"
+    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))\n\nfunction reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\nreverseArray2([‘0’, ‘l’, ‘l’, ‘e’, ‘H’]); reverseArray2([‘s’,‘i’,‘s’, ‘o’, ‘i’, ‘n’, ‘o’, ‘c’, ‘o’, ‘n’, ‘a’, ‘c’, ‘l’, ‘o’, ‘v’, ‘o’, ‘c’, ‘i’, ‘l’, ‘i’, ‘s’, ‘c’, ‘i’, ‘p’, ‘o’, ‘c’, ‘s’, ‘o’, ‘r’, ‘c’, ‘i’, ‘m’, ‘a’, ‘r’, ‘t’, ‘l’, ‘u’, ‘o’, ‘n’, ‘o’, ‘m’, ‘u’, ‘e’, ‘n’, ‘P’]); ```"
   },
   {
     "objectID": "articles/article_01.html#introduction-to-the-problem",
     "href": "articles/article_01.html#introduction-to-the-problem",
     "title": "Chapter 4:Reversing an Array",
     "section": "",
-    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))"
+    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))\n\nfunction reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\nreverseArray2([‘0’, ‘l’, ‘l’, ‘e’, ‘H’]); reverseArray2([‘s’,‘i’,‘s’, ‘o’, ‘i’, ‘n’, ‘o’, ‘c’, ‘o’, ‘n’, ‘a’, ‘c’, ‘l’, ‘o’, ‘v’, ‘o’, ‘c’, ‘i’, ‘l’, ‘i’, ‘s’, ‘c’, ‘i’, ‘p’, ‘o’, ‘c’, ‘s’, ‘o’, ‘r’, ‘c’, ‘i’, ‘m’, ‘a’, ‘r’, ‘t’, ‘l’, ‘u’, ‘o’, ‘n’, ‘o’, ‘m’, ‘u’, ‘e’, ‘n’, ‘P’]); ```"
   },
   {
     "objectID": "articles/article_02.html",
