@@ -4,17 +4,21 @@ project:
 
 website:
   title: "warmup-christara-laing"
-  image: Untitled.png
+  favicon: images/hello.png
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+    
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: united
+      dark: darkly
     css: styles.css
+    
     toc: true
 
 

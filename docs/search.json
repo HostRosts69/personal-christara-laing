@@ -9,28 +9,28 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About Me",
+    "title": "About Me:",
     "section": "",
     "text": "Hello, I’m Christara. A student in CSC 324, who is minoring in computer science and majoring in art."
   },
   {
     "objectID": "about.html#early-life",
     "href": "about.html#early-life",
-    "title": "About Me",
+    "title": "About Me:",
     "section": "Early life:",
     "text": "Early life:\nI am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play."
   },
   {
     "objectID": "about.html#studies",
     "href": "about.html#studies",
-    "title": "About Me",
+    "title": "About Me:",
     "section": "Studies:",
     "text": "Studies:\nI went to Highschool in Paris at Bourbon County High School. In BCHS I took a multitude of classes for computer science. I learned how to code for/in HTML, CSS, and a “simplified” verson of Python.\nNow that I am in college at Georgetown College. I am taking a classes that has helped me learn: R, Javascript, and qurto."
   },
   {
     "objectID": "about.html#life-at-georgetown",
     "href": "about.html#life-at-georgetown",
-    "title": "About Me",
+    "title": "About Me:",
     "section": "Life At Georgetown:",
     "text": "Life At Georgetown:\nMy life at Georgetown has been pretty good as well. I have done more studies with diffrent programing languages, print-making, drawing, and general programing."
   },
@@ -39,14 +39,14 @@
     "href": "articles/article_01.html",
     "title": "Chapter 4:Reversing an Array",
     "section": "",
-    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))\n\nfunction reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\nreverseArray2([‘0’, ‘l’, ‘l’, ‘e’, ‘H’]); reverseArray2([‘s’,‘i’,‘s’, ‘o’, ‘i’, ‘n’, ‘o’, ‘c’, ‘o’, ‘n’, ‘a’, ‘c’, ‘l’, ‘o’, ‘v’, ‘o’, ‘c’, ‘i’, ‘l’, ‘i’, ‘s’, ‘c’, ‘i’, ‘p’, ‘o’, ‘c’, ‘s’, ‘o’, ‘r’, ‘c’, ‘i’, ‘m’, ‘a’, ‘r’, ‘t’, ‘l’, ‘u’, ‘o’, ‘n’, ‘o’, ‘m’, ‘u’, ‘e’, ‘n’, ‘P’]); ```"
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples: Type here  \n\nfunction userInt(input1 = prompt(\"Enter a list of items separated by commas:\")){\n  let input = input1\n  let array = input.split(\",\");\n  return(array)\n}\n\n\n\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
   },
   {
     "objectID": "articles/article_01.html#introduction-to-the-problem",
     "href": "articles/article_01.html#introduction-to-the-problem",
     "title": "Chapter 4:Reversing an Array",
     "section": "",
-    "text": "function reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))\n  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))\n\nfunction reverseArray2(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\nreverseArray2([‘0’, ‘l’, ‘l’, ‘e’, ‘H’]); reverseArray2([‘s’,‘i’,‘s’, ‘o’, ‘i’, ‘n’, ‘o’, ‘c’, ‘o’, ‘n’, ‘a’, ‘c’, ‘l’, ‘o’, ‘v’, ‘o’, ‘c’, ‘i’, ‘l’, ‘i’, ‘s’, ‘c’, ‘i’, ‘p’, ‘o’, ‘c’, ‘s’, ‘o’, ‘r’, ‘c’, ‘i’, ‘m’, ‘a’, ‘r’, ‘t’, ‘l’, ‘u’, ‘o’, ‘n’, ‘o’, ‘m’, ‘u’, ‘e’, ‘n’, ‘P’]); ```"
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples: Type here  \n\nfunction userInt(input1 = prompt(\"Enter a list of items separated by commas:\")){\n  let input = input1\n  let array = input.split(\",\");\n  return(array)\n}\n\n\n\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
   },
   {
     "objectID": "articles/article_02.html",

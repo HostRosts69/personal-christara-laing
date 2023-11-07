@@ -1,5 +1,8 @@
 ---
-title: "About Me"
+title: "About Me:"
+format:
+  html:
+    theme: united
 ---
 
 Hello, I'm Christara. A student in CSC 324, who is minoring in computer science and majoring in art.

@@ -3,27 +3,42 @@ title: "Chapter 4:Reversing an Array"
 ---
 
 ## Introduction to the Problem
-```.js
-  function reverseArray2(array){
-      for(let num = 0; num <= array.length - 1; num += 1){
-          array.splice(num, 0, array.pop(0));
-      }
-      return array;
-  }
+In this problem you have to make a function called `reverseArray` which takes one argument `array`.
 
-  console.log(reverseArray2(['0', 'l', 'l', 'e', 'H']))
-  console.log(reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']))
+The array must be reversed like the examples below:
+```{ojs}
+hello = ['0', 'l', 'l', 'e', 'H'];
+reverseArray(hello);
+
+lick = ['k', 'c', 'i', 'l'];
+reverseArray(lick);
+```
+
+you can try it on your own examples:
+<button onclick = "userInt()">Type here</button>
+<input type="text" id="txtArray"> </input>
+
+```{ojs}
+//|echo: false
+
+function userInt(input1 = prompt("Enter a list of items separated by commas:")){
+  let input = input1
+  let array = input.split(",");
+  return(array)
+}
+
 ```
 
 ```{ojs}
-//| echo: false
-function reverseArray2(array){
+function reverseArray(array){
       for(let num = 0; num <= array.length - 1; num += 1){
           array.splice(num, 0, array.pop(0));
       }
       return array;
   }
 ```
-  reverseArray2(['0', 'l', 'l', 'e', 'H']);
-  reverseArray2(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);
+
+``` {ojs}
+  reverseArray(['0', 'l', 'l', 'e', 'H']);
+  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);
 ```
