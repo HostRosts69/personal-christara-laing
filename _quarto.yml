@@ -10,7 +10,7 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: article_01.qmd
+      - href: articles/article_01.qmd
         text: Reversing An Array
     
 
