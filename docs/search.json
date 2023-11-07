@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Welcome to my Warmup Website! It serves an example site for myself for CSC 324 at Georgetown College, as a warm up building your own website using the Quarto framework.\nYou can read a bit about me here.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me:",
@@ -35,24 +28,31 @@
     "text": "Life At Georgetown:\nMy life at Georgetown has been pretty good as well. I have done more studies with diffrent programing languages, print-making, drawing, and general programing."
   },
   {
-    "objectID": "articles/article_01.html",
-    "href": "articles/article_01.html",
-    "title": "Chapter 4:Reversing an Array",
-    "section": "",
-    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples: Type here  \n\nuserArray = NaN\nfunction userInt(){\n  var input = prompt(\"Enter a list of items separated by commas:\")\n  var array = input.split(\",\");\n  return(array)\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
-  },
-  {
-    "objectID": "articles/article_01.html#introduction-to-the-problem",
-    "href": "articles/article_01.html#introduction-to-the-problem",
-    "title": "Chapter 4:Reversing an Array",
-    "section": "",
-    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples: Type here  \n\nuserArray = NaN\nfunction userInt(){\n  var input = prompt(\"Enter a list of items separated by commas:\")\n  var array = input.split(\",\");\n  return(array)\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
-  },
-  {
     "objectID": "articles/article_02.html",
     "href": "articles/article_02.html",
     "title": "Advent Solution in the Browser",
     "section": "",
     "text": "This article is an application of the Advent of Code 2022 Day 1 solution to the context of the browser.\nTo see it in action, you would create a properly-formatted input file. That is, each line would contain just one number, or would be blank to indicate separation between packs. Save the file somewhere on your computer and then use the input-field below to select it.\n\n\nAfter you select your file, the max pack-total will appear here!\nThe relevant JavaScript file is here. Use the Web Inspector tool on your browser to identify the elements on the html page that are accessed by the code.\nNote: You do not have to implement any of your Eloquent JavaScript solutions in the browser. I wrote this article only to teach myself about reading user-provided files in the browser."
+  },
+  {
+    "objectID": "articles/article_01.html",
+    "href": "articles/article_01.html",
+    "title": "Chapter 4: Reversing an Array",
+    "section": "",
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples:\n\n\n\n\n\nInput\n\n\nOutput\n\n\n\n\n[l,i,c,k]\n\n\n[k,c,i,l]\n\n\n\n\n\nClick For Prompt\n\n\n\n\nStart by making the empty function called reverseArray(array):\nfunction reverseArray(array){\n\n}\n\n\n\nMake a for() loop:\n\n\nlet num = 0: the index and what number it starts at\n\n0: because arrays in Javascript start at 0 not 1\n\n\n\n\n\nnum &lt;= array.length - 1: the condition that needs to be met or else the for loop ends\n\n&lt;=: means less than or equal to\narray.length: gets length of array\n\n-1: because array starts at 0 so the last index of the array is 1 less than array.length\n\n\n\n\n\n\nnum += 1: the amount num incresses by after each loop\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n      \n      }\n}\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
+  },
+  {
+    "objectID": "articles/article_01.html#introduction-to-the-problem",
+    "href": "articles/article_01.html#introduction-to-the-problem",
+    "title": "Chapter 4: Reversing an Array",
+    "section": "",
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can try it on your own examples:\n\n\n\n\n\nInput\n\n\nOutput\n\n\n\n\n[l,i,c,k]\n\n\n[k,c,i,l]\n\n\n\n\n\nClick For Prompt\n\n\n\n\nStart by making the empty function called reverseArray(array):\nfunction reverseArray(array){\n\n}\n\n\n\nMake a for() loop:\n\n\nlet num = 0: the index and what number it starts at\n\n0: because arrays in Javascript start at 0 not 1\n\n\n\n\n\nnum &lt;= array.length - 1: the condition that needs to be met or else the for loop ends\n\n&lt;=: means less than or equal to\narray.length: gets length of array\n\n-1: because array starts at 0 so the last index of the array is 1 less than array.length\n\n\n\n\n\n\nnum += 1: the amount num incresses by after each loop\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n      \n      }\n}\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to my Warmup Website! It serves an example site for myself for CSC 324 at Georgetown College, as a warm up building your own website using the Quarto framework.\nYou can read a bit about me here.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]

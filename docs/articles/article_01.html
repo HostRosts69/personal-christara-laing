@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>warmup-christara-laing - Chapter 4:Reversing an Array</title>
+<title>warmup-christara-laing - Chapter 4: Reversing an Array</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-the-problem" id="toc-introduction-to-the-problem" class="nav-link active" data-scroll-target="#introduction-to-the-problem">Introduction to the Problem</a></li>
+  <li><a href="#introduction-to-the-problem" id="toc-introduction-to-the-problem" class="nav-link active" data-scroll-target="#introduction-to-the-problem">Introduction to the Problem:</a>
+  <ul class="collapse">
+  <li><a href="#part-1-making-function" id="toc-part-1-making-function" class="nav-link" data-scroll-target="#part-1-making-function">Part 1: making function:</a></li>
+  <li><a href="#part-2-for-loop" id="toc-part-2-for-loop" class="nav-link" data-scroll-target="#part-2-for-loop">Part 2: for() loop:</a></li>
+  <li><a href="#part-3-.pop-function" id="toc-part-3-.pop-function" class="nav-link" data-scroll-target="#part-3-.pop-function">Part 3: .pop() function:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -158,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapter 4:Reversing an Array</h1>
+<h1 class="title">Chapter 4: Reversing an Array</h1>
 </div>
 
 
@@ -174,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <section id="introduction-to-the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-the-problem">Introduction to the Problem</h2>
+<h2 class="anchored" data-anchor-id="introduction-to-the-problem">Introduction to the Problem:</h2>
 <p>In this problem you have to make a function called <code>reverseArray</code> which takes one argument <code>array</code>.</p>
 <p>The array must be reversed like the examples below:</p>
 <div class="cell">
@@ -211,55 +216,137 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>you can try it on your own examples: <button onclick="userInt()">Type here</button> <input type="text" id="txtArray"> </p>
+you can try it on your own examples:
+
+<style type="text/css">
+  table{
+    border: 2px solid;
+    width: 100%;
+  }
+  th{
+    border: 2px solid;
+    font-size: 23px;
+  }
+  tr, td{
+    border: 2px solid;
+  }
+  </style>
+<table border="1">
+<tbody><tr>
+<th>
+Input
+</th>
+<th>
+Output
+</th>
+</tr>
+<tr>
+<td id="input">
+[l,i,c,k]
+</td>
+<td id="output">
+[k,c,i,l]
+</td>
+</tr>
+
+</tbody></table>
+<button onclick="userInt()">
+Click For Prompt
+</button>
+<script>
+function userInt(){
+  var input = prompt("Enter a list of items separated by commas:")
+  var userArray = input.split(",");
+  return(replaceText(userArray));
+}
+
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+          array.splice(num, 0, array.pop());
+      }
+      return array;
+}
+
+function replaceText(array)
+{
+  var input = document.getElementById("input");
+  input.innerHTML = "[" + array + "]";
+
+  var output = document.getElementById("output");
+  output.innerHTML = "[" + reverseArray(array) + "]";
+}
+
+
+</script>
+<section id="part-1-making-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-making-function">Part 1: making function:</h3>
+<p>Start by making the empty function called <code>reverseArray(array)</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-2-for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-for-loop">Part 2: for() loop:</h3>
+<p>Make a <code>for()</code> loop:</p>
+<div>
+<ul>
+<li><code>let num = 0</code>: the index and what number it starts at
+<ul>
+<li><code>0</code>: because arrays in Javascript start at <code>0</code> not <code>1</code></li>
+</ul></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><code>num &lt;= array.length - 1</code>: the condition that needs to be met or else the for loop ends
+<ul>
+<li><code>&lt;=</code>: means less than or equal to</li>
+<li><code>array.length</code>: gets length of array
+<ul>
+<li><code>-1</code>: because array starts at <code>0</code> so the last index of the array is <code>1</code> less than <code>array.length</code></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><code>num += 1</code>: the amount <code>num</code> incresses by after each loop</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-3-.pop-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-.pop-function">Part 3: .pop() function:</h3>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>userArray <span class="op">=</span> <span class="kw">NaN</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">userInt</span>(){</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> input <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Enter a list of items separated by commas:"</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> array <span class="op">=</span> input<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(array)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-startfrom="114" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 113;"><span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>          array<span class="op">.</span><span class="fu">splice</span>(num<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> array<span class="op">.</span><span class="fu">pop</span>())<span class="op">;</span></span>
+<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> array<span class="op">;</span></span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-startfrom="32" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 31;"><span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>          array<span class="op">.</span><span class="fu">splice</span>(num<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> array<span class="op">.</span><span class="fu">pop</span>(<span class="dv">0</span>))<span class="op">;</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> array<span class="op">;</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="declaration">
+<div id="ojs-cell-2" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="42" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 41;"><span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'0'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'H'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-startfrom="124" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 123;"><span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'0'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'H'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-4-1" data-nodetype="expression">
+<div id="ojs-cell-3-1" data-nodetype="expression">
 
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb6" data-startfrom="43" data-source-offset="-45"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 42;"><span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'s'</span><span class="op">,</span><span class="st">'i'</span><span class="op">,</span><span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'v'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'p'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'t'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'P'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-startfrom="125" data-source-offset="-45"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 124;"><span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'s'</span><span class="op">,</span><span class="st">'i'</span><span class="op">,</span><span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'v'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'p'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'t'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'P'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-4-2" data-nodetype="expression">
+<div id="ojs-cell-3-2" data-nodetype="expression">
 
 </div>
 </div>
@@ -268,10 +355,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </section>
+</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"userArray = NaN\nfunction userInt(){\n  var input = prompt(\"Enter a list of items separated by commas:\")\n  var array = input.split(\",\");\n  return(array)\n}\n\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

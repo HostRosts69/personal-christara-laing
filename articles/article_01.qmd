@@ -1,8 +1,8 @@
 ---
-title: "Chapter 4:Reversing an Array"
+title: "Chapter 4: Reversing an Array"
 ---
 
-## Introduction to the Problem
+## Introduction to the Problem:
 In this problem you have to make a function called `reverseArray` which takes one argument `array`.
 
 The array must be reversed like the examples below:
@@ -15,24 +15,106 @@ reverseArray(lick);
 ```
 
 you can try it on your own examples:
-<button onclick = "userInt()">Type here</button>
-<input type="text" id="txtArray"> </input>
+  <style type="text/css">
+  table{
+    border: 2px solid;
+    width: 100%;
+  }
+  th{
+    border: 2px solid;
+    font-size: 23px;
+  }
+  tr, td{
+    border: 2px solid;
+  }
+  </style>
+<table border = "1">
+<tr>
+  <th>
+  Input
+  </th>
+  <th>
+  Output
+  </th>
+</tr>
+<tr>
+<td id = "input">
+[l,i,c,k]
+</td>
+<td id = "output">
+[k,c,i,l]
+</td>
+</tr>
+</table>
+<button onclick = "userInt()">Click For Prompt</button>
 
-```{ojs}
-//|echo: false
-userArray = NaN
+<script>
 function userInt(){
   var input = prompt("Enter a list of items separated by commas:")
-  var array = input.split(",");
-  return(array)
+  var userArray = input.split(",");
+  return(replaceText(userArray));
 }
 
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+          array.splice(num, 0, array.pop());
+      }
+      return array;
+}
+
+function replaceText(array)
+{
+  var input = document.getElementById("input");
+  input.innerHTML = "[" + array + "]";
+
+  var output = document.getElementById("output");
+  output.innerHTML = "[" + reverseArray(array) + "]";
+}
+
+
+</script>
+
+### Part 1: making function:
+Start by making the empty function called `reverseArray(array)`:
+
+```.js
+function reverseArray(array){
+
+}
 ```
+
+### Part 2: for() loop:
+Make a `for()` loop:
+
+::: {}
+* `let num = 0`: the index and what number it starts at
+  + `0`: because arrays in Javascript start at `0` not `1`
+:::
+
+::: {}
+* `num <= array.length - 1`: the condition that needs to be met or else the for loop ends
+  + `<=`: means less than or equal to
+  + `array.length`: gets length of array
+    - `-1`: because array starts at `0` so the last index of the array is `1` less than `array.length`
+:::
+
+::: {}
+* `num += 1`: the amount `num` incresses by after each loop
+:::
+
+```.js
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+      
+      }
+}
+```
+### Part 3: .pop() function:
 
 ```{ojs}
 function reverseArray(array){
       for(let num = 0; num <= array.length - 1; num += 1){
-          array.splice(num, 0, array.pop(0));
+          array.splice(num, 0, array.pop());
       }
       return array;
   }
