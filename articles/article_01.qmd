@@ -14,7 +14,94 @@ lick = ['k', 'c', 'i', 'l'];
 reverseArray(lick);
 ```
 
-you can try it on your own examples:
+### Part 1: making function:
+Start by making the empty function called `reverseArray(array)`:
+
+```.js
+function reverseArray(array){
+
+}
+```
+
+### Part 2: for() loop:
+Make a `for()` loop:
+
+::: {}
+* `let num = 0`: the index and what number it starts at
+  + `0`: because arrays in Javascript start at `0` not `1`
+:::
+
+::: {}
+* `num <= array.length - 1`: the condition that needs to be met or else the for loop ends
+  + `<=`: means less than or equal to
+  + `array.length`: gets length of array
+    - `-1`: because array starts at `0` so the last index of the array is `1` less than `array.length`
+:::
+
+::: {}
+* `num += 1`: the amount `num` incresses by after each loop
+:::
+
+```.js
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+      }
+}
+```
+### Part 3: .pop() function:
+* `.pop()`: a function that returns the last value in the array given; also removes the last value in the array
+
+```.js
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+        return("index: " + (array.length - num) + "value : " + array.pop())
+      }
+}
+
+// results of pop:
+buck = ['k', 'c', 'u', 'b'];
+reverseArray(buck);
+```
+
+```{ojs}
+//|echo: false
+function checkPop(array){
+  let results = [];
+  var i = array.length - 1
+      for(let n = 0; n <= array.length + 2; n += 1){
+        results[n] = "index: " + (i) + " value : " + array.pop();
+        i -= 1;
+      }
+  return(results);
+}
+buck = ['k', 'c', 'u', 'b'];
+checkPop(buck);
+```
+
+### Part 4: .splice() function:
+::: {}
+* `.splice`: splices an array at a certain index in a given array.
+  + `num`: where the splice starts at
+  + `0`: how many gets deleted, in this case none are deleated
+    - `.pop`: already deletes the one at the ends of the array
+  + `array.pop()`: removes value from end of array; in the area where the value to be added is
+:::
+
+```{ojs}
+function reverseArray(array){
+      for(let num = 0; num <= array.length - 1; num += 1){
+          array.splice(num, 0, array.pop());
+      }
+      return array;
+  }
+```
+
+``` {ojs}
+  reverseArray(['0', 'l', 'l', 'e', 'H']);
+  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);
+```
+
+### Try Out Your Own Arrays Here:
   <style type="text/css">
   table{
     border: 2px solid;
@@ -73,54 +160,3 @@ function replaceText(array)
 
 
 </script>
-
-### Part 1: making function:
-Start by making the empty function called `reverseArray(array)`:
-
-```.js
-function reverseArray(array){
-
-}
-```
-
-### Part 2: for() loop:
-Make a `for()` loop:
-
-::: {}
-* `let num = 0`: the index and what number it starts at
-  + `0`: because arrays in Javascript start at `0` not `1`
-:::
-
-::: {}
-* `num <= array.length - 1`: the condition that needs to be met or else the for loop ends
-  + `<=`: means less than or equal to
-  + `array.length`: gets length of array
-    - `-1`: because array starts at `0` so the last index of the array is `1` less than `array.length`
-:::
-
-::: {}
-* `num += 1`: the amount `num` incresses by after each loop
-:::
-
-```.js
-function reverseArray(array){
-      for(let num = 0; num <= array.length - 1; num += 1){
-      
-      }
-}
-```
-### Part 3: .pop() function:
-
-```{ojs}
-function reverseArray(array){
-      for(let num = 0; num <= array.length - 1; num += 1){
-          array.splice(num, 0, array.pop());
-      }
-      return array;
-  }
-```
-
-``` {ojs}
-  reverseArray(['0', 'l', 'l', 'e', 'H']);
-  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);
-```

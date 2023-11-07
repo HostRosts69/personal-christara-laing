@@ -154,6 +154,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#part-1-making-function" id="toc-part-1-making-function" class="nav-link" data-scroll-target="#part-1-making-function">Part 1: making function:</a></li>
   <li><a href="#part-2-for-loop" id="toc-part-2-for-loop" class="nav-link" data-scroll-target="#part-2-for-loop">Part 2: for() loop:</a></li>
   <li><a href="#part-3-.pop-function" id="toc-part-3-.pop-function" class="nav-link" data-scroll-target="#part-3-.pop-function">Part 3: .pop() function:</a></li>
+  <li><a href="#part-4-.splice-function" id="toc-part-4-.splice-function" class="nav-link" data-scroll-target="#part-4-.splice-function">Part 4: .splice() function:</a></li>
+  <li><a href="#try-out-your-own-arrays-here" id="toc-try-out-your-own-arrays-here" class="nav-link" data-scroll-target="#try-out-your-own-arrays-here">Try Out Your Own Arrays Here:</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -216,7 +218,144 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-you can try it on your own examples:
+<section id="part-1-making-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-making-function">Part 1: making function:</h3>
+<p>Start by making the empty function called <code>reverseArray(array)</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-2-for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-for-loop">Part 2: for() loop:</h3>
+<p>Make a <code>for()</code> loop:</p>
+<div>
+<ul>
+<li><code>let num = 0</code>: the index and what number it starts at
+<ul>
+<li><code>0</code>: because arrays in Javascript start at <code>0</code> not <code>1</code></li>
+</ul></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><code>num &lt;= array.length - 1</code>: the condition that needs to be met or else the for loop ends
+<ul>
+<li><code>&lt;=</code>: means less than or equal to</li>
+<li><code>array.length</code>: gets length of array
+<ul>
+<li><code>-1</code>: because array starts at <code>0</code> so the last index of the array is <code>1</code> less than <code>array.length</code></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><code>num += 1</code>: the amount <code>num</code> incresses by after each loop</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-3-.pop-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-.pop-function">Part 3: .pop() function:</h3>
+<ul>
+<li><code>.pop()</code>: a function that returns the last value in the array given; also removes the last value in the array</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span>(<span class="st">"index: "</span> <span class="op">+</span> (array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> num) <span class="op">+</span> <span class="st">"value : "</span> <span class="op">+</span> array<span class="op">.</span><span class="fu">pop</span>())</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">// results of pop:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>buck <span class="op">=</span> [<span class="st">'k'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'b'</span>]<span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>(buck)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="68" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">checkPop</span>(array){</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> results <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> i <span class="op">=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> n <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> n <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">+</span> <span class="dv">2</span><span class="op">;</span> n <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>        results[n] <span class="op">=</span> <span class="st">"index: "</span> <span class="op">+</span> (i) <span class="op">+</span> <span class="st">" value : "</span> <span class="op">+</span> array<span class="op">.</span><span class="fu">pop</span>()<span class="op">;</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>        i <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(results)<span class="op">;</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>buck <span class="op">=</span> [<span class="st">'k'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'b'</span>]<span class="op">;</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="fu">checkPop</span>(buck)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="part-4-.splice-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-.splice-function">Part 4: .splice() function:</h3>
+<div>
+<ul>
+<li><code>.splice</code>: splices an array at a certain index in a given array.
+<ul>
+<li><code>num</code>: where the splice starts at</li>
+<li><code>0</code>: how many gets deleted, in this case none are deleated
+<ul>
+<li><code>.pop</code>: already deletes the one at the ends of the array</li>
+</ul></li>
+<li><code>array.pop()</code>: removes value from end of array; in the area where the value to be added is</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-startfrom="90" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 89;"><span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>          array<span class="op">.</span><span class="fu">splice</span>(num<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> array<span class="op">.</span><span class="fu">pop</span>())<span class="op">;</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> array<span class="op">;</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-startfrom="100" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'0'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'H'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb9" data-startfrom="101" data-source-offset="-45"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 100;"><span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'s'</span><span class="op">,</span><span class="st">'i'</span><span class="op">,</span><span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'v'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'p'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'t'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'P'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-out-your-own-arrays-here" class="level3">
+<h3 class="anchored" data-anchor-id="try-out-your-own-arrays-here">Try Out Your Own Arrays Here:</h3>
 
 <style type="text/css">
   table{
@@ -278,80 +417,6 @@ function replaceText(array)
 
 
 </script>
-<section id="part-1-making-function" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-making-function">Part 1: making function:</h3>
-<p>Start by making the empty function called <code>reverseArray(array)</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="part-2-for-loop" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-for-loop">Part 2: for() loop:</h3>
-<p>Make a <code>for()</code> loop:</p>
-<div>
-<ul>
-<li><code>let num = 0</code>: the index and what number it starts at
-<ul>
-<li><code>0</code>: because arrays in Javascript start at <code>0</code> not <code>1</code></li>
-</ul></li>
-</ul>
-</div>
-<div>
-<ul>
-<li><code>num &lt;= array.length - 1</code>: the condition that needs to be met or else the for loop ends
-<ul>
-<li><code>&lt;=</code>: means less than or equal to</li>
-<li><code>array.length</code>: gets length of array
-<ul>
-<li><code>-1</code>: because array starts at <code>0</code> so the last index of the array is <code>1</code> less than <code>array.length</code></li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-<div>
-<ul>
-<li><code>num += 1</code>: the amount <code>num</code> incresses by after each loop</li>
-</ul>
-</div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="part-3-.pop-function" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-.pop-function">Part 3: .pop() function:</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="114" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 113;"><span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reverseArray</span>(array){</span>
-<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(<span class="kw">let</span> num <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> num <span class="op">&lt;=</span> array<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span><span class="op">;</span> num <span class="op">+=</span> <span class="dv">1</span>){</span>
-<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>          array<span class="op">.</span><span class="fu">splice</span>(num<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> array<span class="op">.</span><span class="fu">pop</span>())<span class="op">;</span></span>
-<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> array<span class="op">;</span></span>
-<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="124" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 123;"><span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'0'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'H'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-1" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb7" data-startfrom="125" data-source-offset="-45"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 124;"><span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="fu">reverseArray</span>([<span class="st">'s'</span><span class="op">,</span><span class="st">'i'</span><span class="op">,</span><span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'v'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'p'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'s'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'c'</span><span class="op">,</span> <span class="st">'i'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> <span class="st">'r'</span><span class="op">,</span> <span class="st">'t'</span><span class="op">,</span> <span class="st">'l'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'o'</span><span class="op">,</span> <span class="st">'m'</span><span class="op">,</span> <span class="st">'u'</span><span class="op">,</span> <span class="st">'e'</span><span class="op">,</span> <span class="st">'n'</span><span class="op">,</span> <span class="st">'P'</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-2" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-</div>
 
 
 </section>
@@ -359,7 +424,7 @@ function replaceText(array)
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"function checkPop(array){\n  let results = [];\n  var i = array.length - 1\n      for(let n = 0; n <= array.length + 2; n += 1){\n        results[n] = \"index: \" + (i) + \" value : \" + array.pop();\n        i -= 1;\n      }\n  return(results);\n}\nbuck = ['k', 'c', 'u', 'b'];\ncheckPop(buck);\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
