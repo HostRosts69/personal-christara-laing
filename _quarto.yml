@@ -11,6 +11,7 @@ website:
         text: Home
       - about.qmd
       - href: article_01.qmd
+        text: Reversing An Array
     
 
 format:

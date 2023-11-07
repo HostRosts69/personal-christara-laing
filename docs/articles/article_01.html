@@ -213,14 +213,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>you can try it on your own examples: <button onclick="userInt()">Type here</button> <input type="text" id="txtArray"> </p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="22" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 21;"><span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">userInt</span>(input1 <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Enter a list of items separated by commas:"</span>)){</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> input <span class="op">=</span> input1</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> array <span class="op">=</span> input<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">;</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>(array)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>userArray <span class="op">=</span> <span class="kw">NaN</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">userInt</span>(input1 <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Enter a list of items separated by commas:"</span>)){</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> input <span class="op">=</span> input1</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> array <span class="op">=</span> input<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  globalThis</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-2" data-nodetype="declaration">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
 
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
 </div>
 </div>
 </div>
@@ -261,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"\nfunction userInt(input1 = prompt(\"Enter a list of items separated by commas:\")){\n  let input = input1\n  let array = input.split(\",\");\n  return(array)\n}\n\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"hello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"userArray = NaN\nfunction userInt(input1 = prompt(\"Enter a list of items separated by commas:\")){\n  let input = input1\n  let array = input.split(\",\");\n  globalThis\n}\n\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"function reverseArray(array){\n      for(let num = 0; num <= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop(0));\n      }\n      return array;\n  }\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"  reverseArray(['0', 'l', 'l', 'e', 'H']);\n  reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
