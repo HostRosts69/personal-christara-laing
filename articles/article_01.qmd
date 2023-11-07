@@ -22,9 +22,9 @@ you can try it on your own examples:
 //|echo: false
 userArray = NaN
 function userInt(){
-  let input = prompt("Enter a list of items separated by commas:")
-  let array = input.split(",");
-  globalThis
+  var input = prompt("Enter a list of items separated by commas:")
+  var array = input.split(",");
+  return(array)
 }
 
 ```
