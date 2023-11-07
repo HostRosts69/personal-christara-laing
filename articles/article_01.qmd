@@ -21,8 +21,8 @@ you can try it on your own examples:
 ```{ojs}
 //|echo: false
 userArray = NaN
-function userInt(input1 = prompt("Enter a list of items separated by commas:")){
-  let input = input1
+function userInt(){
+  let input = prompt("Enter a list of items separated by commas:")
   let array = input.split(",");
   globalThis
 }
