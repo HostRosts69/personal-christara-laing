@@ -9,7 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About Me
       - href: articles/article_01.qmd
         text: Reversing An Array
     
