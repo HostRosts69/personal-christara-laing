@@ -22,7 +22,7 @@ format:
     theme: 
       light: united
       dark: darkly
-    css: styles.css
+    
     
     toc: true
 
