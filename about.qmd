@@ -8,7 +8,7 @@ format:
 Hello, I'm Christara. A student in CSC 324, who is minoring in computer science and majoring in art.
 
 ## Early life:
-I am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play.
+I am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play. I also *love hiding secrets*.
 
 ## Studies:
 I went to Highschool in Paris at Bourbon County High School. In BCHS I took a multitude of classes for computer science. I learned how to code for/in HTML, CSS, and a "simplified" verson of Python.

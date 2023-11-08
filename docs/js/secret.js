@@ -48,6 +48,7 @@ function secretEnd (){
     window.resizeTo(window.screen.availWidth , window.screen.availHeight);
 }
 //js refrences used:
+//https://blogdown-demo.rbind.io/2018/01/31/gif-animations/
 //https://developer.mozilla.org/en-US/docs/Web/API/Window
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
 //https://www.w3schools.com/jsref/met_win_moveto.asp
