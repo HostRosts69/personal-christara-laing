@@ -5,7 +5,7 @@ title: "Not Found"
 ### How did you even get here?
 really how did you? 
 
-<script src="/js/secret.js"></script>
+<script src="js/secret.js"></script>
  
 <div id = "secret" onmouseover = 'secretMove()'>
 ![](https://media3.giphy.com/media/AqVHda3AfTe2WkPbbh/giphy.gif?cid=ecf05e47qq0a03gx2tnzyo9br9idq76pu08nn3fj86doelo5&ep=v1_gifs_search&rid=giphy.gif&ct=g)
