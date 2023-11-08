@@ -1,21 +1,69 @@
 ---
-title: "Advent Solution in the Browser"
+title: "Small Point and Click through Windows"
 ---
 
-This article is an application of the Advent of Code 2022 Day 1 solution to the context of the browser.
+This is a small point and click I made it through quarto, js, and some css.
 
-To see it in action, you would create a properly-formatted input file. That is, each line would contain just one number, or would be blank to indicate separation between packs.  Save the file somewhere on your computer and then use the input-field below to select it.
+In this, I learned how to move windows, create windows, and replace windows.
 
-```{=html}
-<input id="fileInput" type="file" name="file" />
+```{.javascript filename="ShortPointAndClick.js"}
+    var interact1 = false;
+    function secretMove(done = interact1){
+        if(done){
+            return ;
+        } else {
+            window.alert("You really aren't suppost to be here... be careful");
+            window.alert("And please don't double click the eyes...");
+            document.getElementById("secret").addEventListener("dblclick", function(event) {
+                secretDouble();
+            });
+            interact1 = true;
+        }
 
-<p id = "result">After you select your file, the max pack-total will appear here!<p>
-```
+    };
 
-The relevant JavaScript file is [here](/js/advent_in_action.js).  Use the Web Inspector tool on your browser to identify the elements on the html page that are accessed by the code.
+    // opens new screen for the rest of the secret
+    var interact2 = false;
+    function secretDouble(){
+        if(interact2){
+            return ;
+        }else{
+            stopPlease = window.open("secret/you-need-to-stop.html", "", "width=500, height=600");
+            stopPlease.addEventListener("load", (event) => {
+                var ranMoveTime = 5;
+                while (ranMoveTime >= 0){
+                    stopPlease.moveTo(getRandomInt(1080), getRandomInt(1080));
+                    ranMoveTime -= 1
+                }
+            });
+        }
+    };
 
-**Note:**  You do not have to implement any of your Eloquent JavaScript solutions in the browser.  I wrote this article only to teach myself about reading user-provided files in the browser.
+    // prompt telling you how to go deeper on window screen
+    var interact3 = false;
+    function goDeeper(){
+        if (interact3){
+            return ;
+        }else{
+            window.alert("Are you sure you want to go deeper?");
+            window.alert("Okay then just click and follow alice down the rabbithole... I warned you though!");
+            interact3 = true;
+        }
+    }
 
-```{=html}
-<script src="/js/advent_in_action.js"></script>
+    var interact4 = false;
+    function secretEnd (){
+        window.location.replace("/articles/article_02.html");
+    }
+    //js refrences used:
+    //https://developer.mozilla.org/en-US/docs/Web/API/Window
+    //https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
+    //https://www.w3schools.com/jsref/met_win_moveto.asp
+    //https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+    //https://www.w3schools.com/jsref/met_loc_replace.asp
+
+    // code to support from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
 ```

@@ -98,6 +98,7 @@ function reverseArray(array){
 
 ``` {ojs}
   reverseArray(['0', 'l', 'l', 'e', 'H']);
+  reverseArray(['k', 'c', 'i', 'l'])
   reverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);
 ```
 
@@ -115,7 +116,8 @@ function reverseArray(array){
     border: 2px solid;
   }
   </style>
-<table border = "1">
+
+<table>
 <tr>
   <th>
   Input
@@ -157,6 +159,4 @@ function replaceText(array)
   var output = document.getElementById("output");
   output.innerHTML = "[" + reverseArray(array) + "]";
 }
-
-
 </script>

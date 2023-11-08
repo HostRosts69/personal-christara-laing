@@ -13,6 +13,8 @@ website:
         text: About Me
       - href: articles/article_01.qmd
         text: Reversing An Array
+      - href: 404.qmd
+        text: Writing Your Own Loop
     
 
 format:

@@ -1,6 +1,22 @@
 ---
 title: "Not Found"
 ---
+<style type="text/css">
+    body {background-color: #171717;
+    color: #f0f0f0;},
+</style>
 
-I'm sorry but the page you are looking for cannot be found. Please check the link to make sure it is right.
+### How did you even get here?
+<script src="js/secret.js"></script>
+<div id = "secret" onmouseover = 'secretMove()'>
+![](https://media3.giphy.com/media/AqVHda3AfTe2WkPbbh/giphy.gif?cid=ecf05e47qq0a03gx2tnzyo9br9idq76pu08nn3fj86doelo5&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+</div>
+
+
+I'm sorry but the page you are looking for cannot be found. 
+Please check the link to make sure it is right.
+
+
+There is nothing here it is just an Error 404...
+I promise...
 
