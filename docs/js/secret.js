@@ -19,6 +19,7 @@ function secretDouble(){
     if(interact2){
         return ;
     }else{
+        //this should work
         stopPlease = window.open("/secret/you-need-to-stop.html", "", "width=500, height=600");
         stopPlease.addEventListener("load", (event) => {
             var ranMoveTime = 5;
