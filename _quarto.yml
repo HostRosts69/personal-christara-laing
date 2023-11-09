@@ -4,7 +4,8 @@ project:
 
 website:
   title: "warmup-christara-laing"
-  favicon: images/hello.png
+  site-path: "warmup-christara-laing/"
+  favicon: "/images/hello.png"
   navbar:
     left:
       - href: index.qmd
