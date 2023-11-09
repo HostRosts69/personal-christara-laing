@@ -4,6 +4,7 @@ project:
 
 website:
   title: "warmup-christara-laing"
+  site-url: "https://hostrosts69.github.io/warmup-christara-laing/"
   favicon: images/hello.png
   navbar:
     left:
