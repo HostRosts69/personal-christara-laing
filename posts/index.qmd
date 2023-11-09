@@ -1,6 +1,6 @@
 ---
 title: "The Spooky Blog:"
-listings:
+listing:
     contents: .
     sort: "date desc"
     type: "default"

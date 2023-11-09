@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "secret/you-need-to-stop.html",
+    "href": "secret/you-need-to-stop.html",
+    "title": "Stop Please I Beg of You",
+    "section": "",
+    "text": "Look I know you want more, but I don’t have it! Even If I did it could get you hurt or worse!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome to my Warmup Website! It serves an example site for myself for CSC 324 at Georgetown College, as a warm up building your own website using the Quarto framework.\nYou can read a bit about me here.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "articles/article_01.html",
+    "href": "articles/article_01.html",
+    "title": "Chapter 4: Reversing an Array",
+    "section": "",
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart by making the empty function called reverseArray(array):\nfunction reverseArray(array){\n\n}\n\n\n\nMake a for() loop:\n\n\nlet num = 0: the index and what number it starts at\n\n0: because arrays in Javascript start at 0 not 1\n\n\n\n\n\nnum &lt;= array.length - 1: the condition that needs to be met or else the for loop ends\n\n&lt;=: means less than or equal to\narray.length: gets length of array\n\n-1: because array starts at 0 so the last index of the array is 1 less than array.length\n\n\n\n\n\n\nnum += 1: the amount num incresses by after each loop\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n      }\n}\n\n\n\n\n.pop(): a function that returns the last value in the array given; also removes the last value in the array\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n        return(\"index: \" + (array.length - num) + \"value : \" + array.pop())\n      }\n}\n\n// results of pop:\nbuck = ['k', 'c', 'u', 'b'];\nreverseArray(buck);\n\nfunction checkPop(array){\n  let results = [];\n  var i = array.length - 1\n      for(let n = 0; n &lt;= array.length + 2; n += 1){\n        results[n] = \"index: \" + (i) + \" value : \" + array.pop();\n        i -= 1;\n      }\n  return(results);\n}\nbuck = ['k', 'c', 'u', 'b'];\ncheckPop(buck);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.splice: splices an array at a certain index in a given array.\n\nnum: where the splice starts at\n0: how many gets deleted, in this case none are deleated\n\n.pop: already deletes the one at the ends of the array\n\narray.pop(): removes value from end of array; in the area where the value to be added is\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['k', 'c', 'i', 'l'])\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\n\nOutput\n\n\n\n\n[l,i,c,k]\n\n\n[k,c,i,l]\n\n\n\n\n\nClick For Prompt"
+  },
+  {
+    "objectID": "articles/article_01.html#introduction-to-the-problem",
+    "href": "articles/article_01.html#introduction-to-the-problem",
+    "title": "Chapter 4: Reversing an Array",
+    "section": "",
+    "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart by making the empty function called reverseArray(array):\nfunction reverseArray(array){\n\n}\n\n\n\nMake a for() loop:\n\n\nlet num = 0: the index and what number it starts at\n\n0: because arrays in Javascript start at 0 not 1\n\n\n\n\n\nnum &lt;= array.length - 1: the condition that needs to be met or else the for loop ends\n\n&lt;=: means less than or equal to\narray.length: gets length of array\n\n-1: because array starts at 0 so the last index of the array is 1 less than array.length\n\n\n\n\n\n\nnum += 1: the amount num incresses by after each loop\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n      }\n}\n\n\n\n\n.pop(): a function that returns the last value in the array given; also removes the last value in the array\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n        return(\"index: \" + (array.length - num) + \"value : \" + array.pop())\n      }\n}\n\n// results of pop:\nbuck = ['k', 'c', 'u', 'b'];\nreverseArray(buck);\n\nfunction checkPop(array){\n  let results = [];\n  var i = array.length - 1\n      for(let n = 0; n &lt;= array.length + 2; n += 1){\n        results[n] = \"index: \" + (i) + \" value : \" + array.pop();\n        i -= 1;\n      }\n  return(results);\n}\nbuck = ['k', 'c', 'u', 'b'];\ncheckPop(buck);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.splice: splices an array at a certain index in a given array.\n\nnum: where the splice starts at\n0: how many gets deleted, in this case none are deleated\n\n.pop: already deletes the one at the ends of the array\n\narray.pop(): removes value from end of array; in the area where the value to be added is\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['k', 'c', 'i', 'l'])\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\n\nOutput\n\n\n\n\n[l,i,c,k]\n\n\n[k,c,i,l]\n\n\n\n\n\nClick For Prompt"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "The Spooky Blog:",
+    "section": "",
+    "text": "Posts of my Cat Jinx:\n\n\n\n\n\n\n\nanimal\n\n\npersonal\n\n\n\n\nJinx Marble my little cute gremlin of a cat.\n\n\n\n\n\n\nChristara Laing\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2023-11-9/JinxThebby.html",
+    "href": "posts/2023-11-9/JinxThebby.html",
+    "title": "Posts of my Cat Jinx:",
+    "section": "",
+    "text": "This is an image of Jinx Marble, my cat and she loves to take naps on me. I swear she is a velcro cat."
+  },
+  {
+    "objectID": "articles/article_02.html",
+    "href": "articles/article_02.html",
+    "title": "Small Point and Click through Windows",
+    "section": "",
+    "text": "This is a small point and click I made it through quarto, js, and some css.\nIn this, I learned how to move windows, create windows, and replace windows.\n\n\nShortPointAndClick.js\n\n    var interact1 = false;\n    function secretMove(done = interact1){\n        if(done){\n            return ;\n        } else {\n            window.alert(\"You really aren't suppost to be here... be careful\");\n            window.alert(\"And please don't double click the eyes...\");\n            document.getElementById(\"secret\").addEventListener(\"dblclick\", function(event) {\n                secretDouble();\n            });\n            interact1 = true;\n        }\n\n    };\n\n    // opens new screen for the rest of the secret\n    var interact2 = false;\n    function secretDouble(){\n        if(interact2){\n            return ;\n        }else{\n            stopPlease = window.open(\"secret/you-need-to-stop.html\", \"\", \"width=500, height=600\");\n            stopPlease.addEventListener(\"load\", (event) =&gt; {\n                var ranMoveTime = 5;\n                while (ranMoveTime &gt;= 0){\n                    stopPlease.moveTo(getRandomInt(1080), getRandomInt(1080));\n                    ranMoveTime -= 1\n                }\n            });\n        }\n    };\n\n    // prompt telling you how to go deeper on window screen\n    var interact3 = false;\n    function goDeeper(){\n        if (interact3){\n            return ;\n        }else{\n            window.alert(\"Are you sure you want to go deeper?\");\n            window.alert(\"Okay then just click and follow alice down the rabbithole... I warned you though!\");\n            interact3 = true;\n        }\n    }\n\n    var interact4 = false;\n    function secretEnd (){\n        window.location.replace(\"/articles/article_02.html\");\n    }\n    //js refrences used:\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window/alert\n    //https://www.w3schools.com/jsref/met_win_moveto.asp\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event\n    //https://www.w3schools.com/jsref/met_loc_replace.asp\n\n    // code to support from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random\n    function getRandomInt(max) {\n        return Math.floor(Math.random() * max);\n    }"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me:",
+    "section": "",
+    "text": "Hello, I’m Christara. A student in CSC 324, who is minoring in computer science and majoring in art."
+  },
+  {
+    "objectID": "about.html#early-life",
+    "href": "about.html#early-life",
+    "title": "About Me:",
+    "section": "Early life:",
+    "text": "Early life:\nI am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play. I also love hiding secrets."
+  },
+  {
+    "objectID": "about.html#studies",
+    "href": "about.html#studies",
+    "title": "About Me:",
+    "section": "Studies:",
+    "text": "Studies:\nI went to Highschool in Paris at Bourbon County High School. In BCHS I took a multitude of classes for computer science. I learned how to code for/in HTML, CSS, and a “simplified” verson of Python.\nNow that I am in college at Georgetown College. I am taking a classes that has helped me learn: R, Javascript, and qurto."
+  },
+  {
+    "objectID": "about.html#life-at-georgetown",
+    "href": "about.html#life-at-georgetown",
+    "title": "About Me:",
+    "section": "Life At Georgetown:",
+    "text": "Life At Georgetown:\nMy life at Georgetown has been pretty good as well. I have done more studies with diffrent programing languages, print-making, drawing, and general programing."
+  }
+]
