@@ -19,7 +19,7 @@ function secretDouble(){
     if(interact2){
         return ;
     }else{
-        stopPlease = window.open("secret/you-need-to-stop.html", "", "width=500, height=600");
+        stopPlease = window.open("https://hostrosts69.github.io/personal-christara-laing/secret/you-need-to-stop.html", "", "width=500, height=600");
         stopPlease.addEventListener("load", (event) => {
             var ranMoveTime = 5;
             while (ranMoveTime >= 0){
