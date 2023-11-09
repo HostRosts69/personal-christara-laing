@@ -17,6 +17,8 @@ website:
         text: Reversing An Array
       - href: 404.qmd
         text: Writing Your Own Loop
+      - href: posts/index.qmd
+        text: Blog
     
 
 format:
