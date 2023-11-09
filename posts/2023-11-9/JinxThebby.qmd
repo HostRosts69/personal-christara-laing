@@ -1,0 +1,9 @@
+---
+title: "Posts of my Cat Jinx:"
+description: "Jinx Marble my little cute gremlin of a cat."
+author:
+    - name: Christara Laing
+categories: [animal, personal]
+---
+
+This is an image of Jinx Marble, my cat and she loves to take naps on me. I swear she is a velcro cat.
