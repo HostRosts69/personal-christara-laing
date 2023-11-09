@@ -6,7 +6,7 @@ title: "Not Found"
 really how did you? 
 
 ``` {=html}
-    <script src="js/secret.js"></script>
+    <script src="/js/secret.js"></script>
  ```
 
 <div id = "secret" onmouseover = 'secretMove()'>
