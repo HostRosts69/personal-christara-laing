@@ -1,7 +1,7 @@
 ---
 title: "The Spooky Blog:"
 listing:
-    contents: .
+    contents: warmup-christara-laing/posts
     sort: "date desc"
     type: "default"
     categories: true
