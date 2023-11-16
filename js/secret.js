@@ -44,7 +44,7 @@ function goDeeper(){
 
 var interact4 = false;
 function secretEnd (){
-    window.location.replace("/articles/article_02.html");
+    window.location.replace("../articles/article_02.html");
     window.resizeTo(window.screen.availWidth , window.screen.availHeight);
 }
 //js refrences used:
