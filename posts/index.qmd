@@ -1,11 +1,11 @@
 ---
 title: "The Spooky Blog:"
 listing:
-    contents: ..
+    contents: .
     sort: "date desc"
     type: "default"
     categories: true
     sort-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
