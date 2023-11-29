@@ -12,9 +12,7 @@ website:
         text: Home
       - href: about.qmd
         text: About Me
-      - href: articles/article_01.qmd
-        text: Reversing Arrays
-      - href: articles/article_02.qmd
+      - href: articles/GC_calender/index.qmd
         text: GC Calender
       - text: Articles
         menu:
@@ -26,7 +24,6 @@ website:
             href: articles/article_02.qmd
       - text: The Spooky Blog
         href: posts/index.qmd
-    
 
 format:
   html:

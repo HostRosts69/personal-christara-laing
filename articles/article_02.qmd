@@ -327,3 +327,5 @@ DISCLAMER: Part of it is broken due to the automatic resizing issue from the `to
 - for the essays changed font using on page css
 
 - changed backgrounds for secret using css
+
+- added a dropdown menu for articles through quarto through a `menu:` operator
