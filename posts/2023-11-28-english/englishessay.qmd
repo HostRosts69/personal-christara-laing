@@ -1,38 +1,69 @@
 ---
-title: "Kant and Lying to the Drunk Friend Senario"
+title: "Why Folktales Exist?"
 description: "This is an essay I did for my old english class"
 author:
     - name: Christara Laing
-categories: [essay, english, kant, lying, drunk]
+categories: [essay, english, fairytales, why]
 date: 11/28/2023
 ---
 <style>
-p {
+h5, p, h2 {
     font-family: "Times New Roman";
 }
 </style>
 
-Christara Laing
-Dr. Shelly Johnson
-Ethics
-September 1, 2023
+##### Christara L. Laing	 
+##### 9/20/2022 
+##### ENG 112(C) 
 
-## Kant and Lying to the Drunk Friend Scenario
+## “Why Folktales Exist?” 
 <p>
-Kant, a deontological moral philosopher, argues that the ground of morality is duty and obeying the categorical imperative (Kant 327). This imperative tells us that we should only act on the maxim we could will to be universal law (327). Another way of staying the categorical imperative is to say that we should treat people as an end in themselves and not just a means to our end (Kant 333). We can use Kant’s categorical imperative to help us understand the moral thing to do in situations like the Lying to the Drunk Friend Scenario. Kant would argue that the person in the Lying to the Drunk Friend Scenario (LDFS) is immoral but only due to the lie.
+Everyone remembers the folktales and fairytales told to us as children. From the grim fairytales from the Brothers Grimm, the stories from The Mother Goose, or even the folktales just told to you by your uncle, as he tried to get you to fall asleep. Folktales and fairytales stay with us all our lives even if we think of them as childish now because they are meant to entertain us, to present our childish selves morals that we could understand and memorize all the way up to adulthood, and even to comfort our adult selves when we get older. 
+ 
 
-To understand why Kant would argue this, we must understand his moral theory. Firstly, morality isn’t grounded in empirical matters because morals are based on a priori reason and must be able to be applied universally to everyone and every situation. A priori reason is the knowledge we know from just reason alone (Kant 321-322). This a priori reason can also be used to understand the categorical imperative. The categorical imperative is the action is an end-in-itself (334). The categorical imperative tells us to only act on the maxim that we could will to be universal law (336). The categorical imperative can also be proven by the universality principle (“Kant & Categorical Imperatives: Crash Course Philosophy #35” 00:3:00–00:3:25). To quote Kant, “Act only according to that maxim which you can at the same time will that it should become a universal law without contradiction (qtd. in “Kant & Categorical Imperatives: Crash Course Philosophy #35” 00:3:00–00:3:25).”  Dr. Johnson points out about Kant, “when we act morally, we have autonomy of the will-- The will is a law unto itself (Kant 342)(Kant, Part #3 7)” . Autonomy through this quote is being able to act upon yourself through your own reasoning, without anything else, forcing you or forcing a law on you. If someone were to force a law on you or outside of you, then it's heteronomy (Kant 342).
+The first way that folktales and fairytales help children understand and memorize complex morals is through simplistic stories such as in “Ashputtle” from the Brothers Grimm. Due to Cinderella being nice and patient she is rewarded with being able to go to the ball because birds help her as she has been nice to her other sisters (Grimm 489-490). Another way her patience pays off is through the ending. To summarize “Ashputtle,” in the end her stepmother tells her sisters to cut off parts of their feet so they could fit in the shoe, but the birds from before kept yelling at the prince that there was blood in the shoe. That was until the shoe got to Cinderella who tried on the shoe without needing to hurt herself (Jakob and Wilhelm Grimm, 491-492). Another moral brought up in that same story is through the ending where, “...The elder was at the left, and the younger at the right, and then the pigeons pecked out the other eye of each. And thus, for their wickedness and falsehood, they were punished with blindness as long as they lived” (Jakob and Wilhelm Grimm 492). This is also supported by “Cinderella Tales and Their Significance,” “These insults are a final sign that Cinderella does 
 
-With all these things being said about Kant’s theory then what would Kant about the LDFS. The LDFS presents a scenario where you are given a gun by your friend. After a while your friend comes back, drunk, and asks you to hand him the gun; as he wants to kill another friend, he had a fight with. Kant would say in this situation you could not lie. As the maximum of lying is unable to be universalized. Which intern goes against Kants theory of universality.
+not belong in the diminished status that is her current home as not even her father sees 
 
-A specific example that Kant uses about lying is (Kant & Categorical Imperatives: Crash Course Philosophy #35 00:5:01- 00:10:27) . If Elvira lies to the killer about where Tony is, Tony could be around the corner at the same time the killer decides to leave. This would have her responsible for Tony's death. If she told the truth, then only the murderer would've been responsible for the deaths that occurred. The reason is she cannot control what the murderer does. She can only control what she does in the situation. 
+any worth in her. The slipper fits Cinderella properly and the prince marries her. On the 
 
-But if you give your friend the gun, then that Maxim would be giving your friend a gun. Which would allow them to murder someone meaning that guilt would be on you. So can't would probably say in the situation that the best thing to do would be to not lie, but tell your friend, I am not giving you the gun because you're drunk and also no matter what don't give your friend the gun. 
+day of the wedding the doves pluck out the eyes of the stepsisters for their ugly actions 
+
+and attitudes.... Audiences are led into learning the consequences of their bad deeds and sinful 
+
+attitudes, such as greed and arrogance” (Friedman 30). These two quotes show how greed, arrogance, and bad deeds are punished, while people who do not do these things are not punished but instead rewarded just like Cinderella. 
+
+ 
+
+Another way folktales and fairytales help children understand and memorize complex morals is because fairytales and folktales alike lead people and children into stories of discovery, self-discovery, and ways to survive the harsh world. A quote that supports this is from “Introduction to Fairytales,” “.... Not using books as merely consultation, but as a way of navigating reality, of figuring out how to survive” (Tatar 482). This quote shows how stories are used for more than just fun, but also teaches people how to survive. For example, a story from my childhood was a German story called “SuppernKasper.” The story of “SuppenKasper” is a story of a small boy named Kasper, who refuses to eat his soup, in turn causing his mom to let him not eat (Hoffmen par. 1). He still would not eat so his mom just lets him not eat and gives him the soup the next day (Hoffmen par.2). As anyone could have guessed Kasper still did not want to eat the soup, repeatedly until he dies from starving to death (Hoffmen par .3-4). As ridiculous as the idea of a folktale with a child dying in its story is, the story was made to scare picky kids into eating and not die from malnutrition. This story worked on me and scared me into being not so picky and wanting to try new foods and experiences as I got older. Another story that helps with self-discovery is David and Goliath, from the bible. In David and Goliath, through David’s resilience and strong faith he managed to defeat Goliath, Philistin (NIV 1, Samuel 17). This story helped me think of myself highly as David was so insignificant compared to the Goliath's size, yet he was able to defeat him even though he only had a slingshot and a rock to defeat the man. Even nowadays I think back to this story, as I am noticeably short, and it helps me come to terms with my height. It allows me to think of myself as being able to do anything and my height is not the thing that will hold me back. 
+
+ 
+
+Another way “you can see how” Folktales and fairytales are great at shaping us is they stay with us for a long time. According to “Introduction to Fairytales,” “Whether we are aware of it or not, fairytales have molded behavioral codes and developmental paths, even as they provide us with terms for thinking about what happen in our world. delete period” (Tatar, delete comma 482). This quote shows how fairytales and their morals stick with you. For example, everyone has had a time where you remember a random part of a fairytale. An example that has happened to me is, when I thought of the other mother--what other mother? when I was younger and an older woman, a stranger to me, told me that she was my Memaw’s friend. If you all do not know the movie of Coraline, the story is about how a child meets the other mother. The other mother pretends to be her mother and acts nice to Coraline, but truly just wants Coraline’s eyes in the end (Selick). Though, the older lady was a friend of my Memaw. My Memaw was grateful I did not just blindly believe the words of a woman who I did not know. To this day the impact of Coraline stays in my head when I meet any person who is a stranger who tries to pretend they know me. 
+
+ 
+
+Fairytales and folktales also follow us into adulthood as they were not just first made for kids. This might seem odd as nowadays we think that folktales and fairytales are made for kids. Though theories have appeared that the stories were first made for adults. According to 
+
+“Cinderella Tales and their Significance,” “...Zipes posits that literary fairytales began gaining popularity as a sort of amusement or game particularly played by aristocratic French women...”(Friedman 10). The idea of children stories used to be made for adults is also shown in “An Introduction to Fairytales”. “An Introduction to Fairytales” says, “If we look at the stories in their earliest written forms, we discover preoccupations and ambitions that conform to adult anxieties and desires” (Tatar 483) and “Fairy tales, once told by peasants around the fireside to distract them from the tedium of domestic chores, were transplanted with great success into the nursery, where they thrive in the form of entertainment and edification for children.” (Tatar 483). This shows that fairytales teach more adult ideas even to kids as they grow up.  
+
+
+But the idea of morals following you into adulthood means that even harsh ones could follow you into adulthood, or at least seems that way. Tom Morrison mentions the idea that one idea of a moral that could be gotten from Cinderella is to treat your stepsisters badly. For example, “What is unsettling about that fairy tale is essentially the story of household -- a world, if you please -- of women gathered together and held together in order to abuse another woman” (Morrison 507). In this quote you can see how she is focusing on the idea of the sisters abusing Cinderella as the reason they are together. The idea of that being the only thing holding the family together is completely wrong as in Cinderella they choose to treat her poorly and the stepmother marries her father (Grimm 489). Another point brought up by Morrison is, “Having watched and participated in the violent dominion of another woman, will they be any less cruel when it comes there turn to enslave other children, or even when they are required to take care of their own mother” (Morrison 507)? If we examine the Grimm Brothers's version of the tale you can tell that the stepsisters get punished for treating Cinderella badly, by getting their eyes pecked out (Grimm 492). This shows that if people do act like this to one another, they should be indeed punished and will be punished for doing such deeds. In most fairytales and Folktales, the person who has done deal to the main character of the story is punished usually severely so. 
+
+
+
+Overall fairytales and folktales are wonderful ways to share morals. They share morals through a multitude of ways. The ways they share all their morals is through: helping children understand and memorize complex morals, creating morals that will stay with us through our lifetime, and creating morals that align with our adult selves as we get older. Each story does this in a multitude of ways. from the story of “Ashputtle,” “Suppenkasper,” and even Coraline. </p>
+
+ 
+## Citations: 
+<p>
+Behrens, Laurence, and Leonard J. Rosen. Writing and Reading across the Curriculum. 14th ed., Pearson, 2018.  
+
+Friedman, Kristen. “Cinderella Tales and Their Significance.” Cinderella Tales and Their Significance, Scholars Archive, https://scholarsarchive.library.albany.edu/honorscollege_anthro/1/.  
+
+Hoffmann, Heinrich. “Hoffmann, Heinrich: The Story of Augustus, Who Would Not Have Any Soup (Die Geschichte Vom Suppen-Kaspar in English).” Babel Web Anthology, https://www.babelmatrix.org/works/de/Hoffmann,_Heinrich-1809/Die_Geschichte_vom_Suppen-Kaspar/en/40224-The_Story_of_Augustus,_who_would_not_have_any_Soup.  
+
+New International Version: 1 Samuel 17. Biblica, 1997.  
+
+Selick, Henry, director. Coraline, Amazon, https://www.amazon.com/gp/video/detail/amzn1.dv.gti.5ca9f7a0-5810-c8f2-2b5b-b220be457e2e?autoplay=0&ref_=atv_cf_strg_wb. Accessed 18 Sept. 2022. 
 </p>
-## Works Cited:
-
-“Kant & Categorical Imperatives: Crash Course Philosophy #35.” Www.youtube.com, www.youtube.com/watch?v=8bIys6JoEDw&t=371s. Accessed 18 Sept. 2023.
-
-Dr. Johnson, Shelly. “Kant, Part #3.pptx.” Kant, Part #3.pptx, 2003, georgetowncollege.instructure.com/courses/5574/files/1033310?module_item_id=276642. Accessed 19 Sept. 2023.
-
-Kant, Immanuel. “Groundwork for the Metaphysics of Morals.” Ethics, by Steven Cahn and Peter Markie, 198 Madison Avenue, New York, NY 10016, United States of America, Oxford University Press, 2019, pp. 320–336.

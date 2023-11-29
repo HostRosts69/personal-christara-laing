@@ -5,7 +5,9 @@ title: "Not Found"
     body {background-color: #171717;
     color: #f0f0f0;},
 </style>
-
+<audio src="audio/wrongPlace.mp3" preload="auto" autoplay>
+      Your browser does not support the audio element.
+</audio>
 ### How did you even get here?
 really how did you? 
 

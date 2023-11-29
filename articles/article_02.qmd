@@ -304,3 +304,26 @@ calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, useDetailPopup = T
 ::: {.callout-important}
 DISCLAMER: Part of it is broken due to the automatic resizing issue from the `toastui` `calender.js` file.
 :::
+
+# Minor:
+- added audio autoplay audio
+- ```.html 
+  <audio src="assets/wrongPlace.mp3" preload="auto" autoplay>
+        Your browser does not support the audio element.
+  </audio>
+```
+
+- added gifs:
+  - ```.html 
+  ![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/077f7eb0-ab76-4335-87fc-24817b8d9350/d7a459j-3968d5c1-9aec-46e4-953f-63d1fd3790ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.)
+  ```
+  - `()`: shows preview of link if there is no link text and it is a gif
+
+- added images through html
+  - ```.html
+    <img src = "link"></img>
+  ```
+
+- for the essays changed font using on page css
+
+- changed backgrounds for secret using css

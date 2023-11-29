@@ -1,0 +1,28 @@
+---
+title: "Horror Maze Game Idea"
+description: "This is just some notes for my game idea"
+author:
+    - name: Christara Laing
+categories: [game, idea, code]
+date: 11/29/2023
+image: "https://2.bp.blogspot.com/-8hWtA3Sx3m8/TcUSW8WjosI/AAAAAAAAEAw/-CUPdcs5m9w/s400/rsz_1scary-maze-game-challenge-3.png"
+---
+## Notes:
+### Player:
+- player has infinite lives 
+- player resets when they die
+- player is cursor
+
+### Entities:
+- Walls: resets player to start position when they die
+- Cannon: that resets player with projectile
+- Wind: object that blows around player
+- Spikes:
+    - non-active: player can move over them
+    - active: will reset player to start position of level
+    - ai: spikes that appear based on previous movements of cursor
+- Platforms: 
+    - moving: moves back and forth
+    - static: are static until a button is pressed to make them move
+    - moveable: platforms that can be clicked and moved by the player
+    - player induced: platforms made up by dropbox functionality of the left click of mouse (4th wall break)
