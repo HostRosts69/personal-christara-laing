@@ -5,6 +5,7 @@ author:
     - name: Christara Laing
 categories: [essay, ethics, kant, lying, drunk]
 date: 11/29/2023
+image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kant_gemaelde_3.jpg"
 ---
 <style>
 h5, p, h2 {
