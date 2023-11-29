@@ -1,0 +1,205 @@
+---
+title: "Chapter 2: Printing a Chessboard"
+---
+## Introduction into The Problem:
+Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
+
+Passing this string to `console.log()` should show something like this:
+```.js
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # #
+```
+
+## Part 1: Making a For Loop:
+Since the size of the board will be determed outside of the loop lets call it: `size` and make it equal to `8` because that will be the length and width of our board
+```.js
+size = 8;
+```
+
+Second we need to make a `for` loop in Javascript.
+```.js
+for (index; condition; equation) {
+
+}
+```
+The loop needs a index, condition, and an equation to change the index by:
+- **Index**: the variable that starts out the equation and what it starts at
+    - Ex: `let i = 0;`
+- **Condition**: the condition that has to be met for the for loop to *continue* functioning
+    - Ex: `i >= 8;`
+- **Equation**: the equation that updates the *index* eather to a lower or higher number, until the conditon is met
+    - Ex: `i = 1+i;`
+
+
+#### Our For Loop:
+Since the loop will go on for the length of size, lets call our index `sizeL`:
+    - `sizeL = size;`: is our *index* because `size` is the size of the board we need to produce
+    - `sizeL >= 1;`: is our *condition* because we need to stop it just short of 0 or else we overflow and add another colum.
+    - `sizeL = sizeL-1;`: is our *equation* as we need to count down from `sizeL` to reach 1, as sizeL will always be greater than or equal to 1.
+
+```.js
+size = 8;
+for (let sizeL = size; sizeL >= 1; sizeL = sizeL - 1) {
+
+}
+```
+
+## Part 2: Making a if Statement
+We need an `if` statement to check if we are on an even or odd row so we can change up the patterns and reverse them.
+
+An `if` statment needs a *conditon* attached to it, to decied if one action needs to be done over another.
+
+- `if()`:
+    - **Condition**: the equation/operation that returns a *True* or *False* value that the if statment uses to decide what action should be preformed
+    - **True**: the action done if the condition is *True*
+    - **False(Else)**: the action done if a conditon is *False*
+
+
+#### Our if Statment:
+- `sizeL % 2 == 0`: the equation that returns a *True* or *False* value to our if statment
+    - `sizeL`: the size of the position we are in in the length of the rows
+    - `%`: divides and then returns the remainder of solution
+        - `2`: because all even numbers are divisable by 2 with no remainders
+    - `==`: an operator that tells if a string or number is the same as another
+        - `0`: because if the remainder is 0 then it was fully dividsable by 2 making it even
+
+```.js
+size = 8;
+for (let sizeL = size; sizeL >= 1; sizeL = sizeL - 1) {
+    if (sizeL % 2 == 0) {
+
+    }else{
+
+    }
+}
+```
+
+
+## Part 3: Adding Functionality to the If Statment:
+- `if(){}`: runs this code when condition is *True*
+    - `let length = size;`: creates a variable called length that takes it's value from size (8)
+    - `While()`: a loop that continues when the condition is met and only stops when the condition is not met
+        - `length >= 1`: condition that says when `length` is greater than or equal to 1 then continue the loop
+        - `if(){}`: if loop that decides what symbols to produce
+            - `length % 2 == 0`: if the remainder of `length` divided by 2 is equal to 0 then it is *True*
+            - `heck`: the variable that holds the string of symbols so they can be printed later
+            - *True*:
+                - `heck = heck + "#";`: the code called to add a "#" to the variable `heck` when ever `length % 2 == 0` is *True*(is even)
+            - *False*:
+                - `heck = heck + " ";`: adds an empty space to the `heck` variable if `length % 2 == 0` is *False*(not even)
+            - `length = length - 1`: after the symbol from the `if` statment is added it tells it to subtract one from length for the next symbol in the row
+
+- `else{}`: runs code if condition is *False*:
+   - `let length = size;`: creates a variable called length that takes it's value from size (8)
+        - `While()`: a loop that continues when the condition is met and only stops when the condition is not met
+            - `length >= 1`: condition that says when `length` is greater than or equal to 1 then continue the loop
+            - `if(){}`: if loop that decides what symbols to produce
+                - `length % 2 == 0`: if the remainder of `length` divided by 2 is equal to 0 then it is *True*
+                - `heck`: the variable that holds the string of symbols so they can be printed later
+                - *True*:
+                    - `heck = heck + " ";`: the code called to add a "#" to the variable `heck` when ever `length % 2 == 0` is *True*(is even)
+                - *False*:
+                    - `heck = heck + "#";`: adds an empty space to the `heck` variable if `length % 2 == 0` is *False*(not even)
+                - `length = length - 1`: after the symbol from the `if` statment is added it tells it to subtract one from length for the next symbol in the row
+
+To summarize the `if` adds "#" on evens and " " on odds, while the `else` adds " " on evens and "#" on odds.
+
+```.js
+size = 8;
+for (let sizeL = size; sizeL >= 1; sizeL = sizeL - 1) {
+
+    if (sizeL % 2 == 0) {
+        let length = size;
+        while (length >= 1) {
+            if (length % 2 != 0) {
+                heck = heck + "#";
+            } else {
+                heck = heck + " ";
+            }
+            length = length - 1;
+        }
+
+    } else {
+        let length = size;
+        while (length >= 1) {
+            if (length % 2 == 0) {
+                heck = heck + "#";
+            } else {
+                heck = heck + " ";
+            }
+            length = length - 1;
+        }
+    }
+}
+```
+
+## Part 4: The Finishing Touch:
+Since the for loop is making a string called `heck` with the pattern we need we aren't finished because it isn't in multiple lines.
+
+So to fix this issue we add a line of code near the end of the for loop:
+- `heck = heck + "\n"; `: adds a `\n` to the string which translates to making a new line
+
+Since it is near the end it will add it after each row of the chessboard is made, spliting each row into it's own seprate line.
+
+Then lastly, we `console.log()` the variable `heck`.
+- `console.log()`: prints what ever you put into, it into the console.
+
+## Full Code:
+::: {.callout-note}
+due to an ojs error we had to put it in a function and change `size` to `boardSize`
+:::
+```{ojs}
+//| output: False
+boardSize = 8;
+checkerboard = function(size = boardSize){
+    var heck = "";
+    for (let sizeL = size; sizeL >= 1; sizeL = sizeL - 1) {
+        if (sizeL % 2 == 0){
+            let length = size;
+            while (length >= 1) {
+                if (length % 2 != 0) {
+                    heck = heck + "#";
+                } else {
+                    heck = heck + " ";
+                }
+
+                length = length - 1;
+            }
+
+        } else {
+            let length = size;
+            while (length >= 1) {
+                if (length % 2 == 0) {
+                    heck = heck + "#";
+                } else {
+                    heck = heck + " ";
+                }
+
+                length = length - 1;
+            }
+        }
+        heck = heck + "\n";
+    }
+
+    //console.log(heck);
+    return heck;
+}
+checkerboard();
+```
+```.js
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # #
+```
+

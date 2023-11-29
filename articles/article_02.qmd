@@ -115,8 +115,8 @@ Then `.addEventListener()` adds the event listener(a user or program event that 
 <p><a href = "https://hostrosts69.github.io/personal-christara-laing/GC_calender/index.qmd">This calender</a> is based on the Georgetown College's <a href= "GC_calender/assets/gcCalender.csv">csv</a> file that can be aquired on their <a href= "https://www.georgetowncollege.edu/events">website</a>.
 The code was all done in R script as well.</p>
 
-```.r
-if(!require(toastui)) install.packages("toastui",repos = "http://cran.us.r-project.org")
+```{.r}
+if(!require(toastui)) install.packages ("toastui",repos = "http://cran.us.r-project.org") #installs toastui if package isn't already installed
 library(tidyverse)
 library(dplyr)
 library(tidyr)
@@ -124,7 +124,7 @@ library(purrr)
 library(devtools)
 library(toastui)
 
-gc_events <- read_csv("assets/gcCalender.csv")
+gc_events <- read_csv("assets/gcCalender.csv")#reads the csv file from folder
 
 all_day_events <- gc_events %>% 
                     filter(`All day event` == TRUE)
@@ -142,10 +142,10 @@ all_day_events <- all_day_events %>%
                     arrange(desc(Subject))
 # marks all the events
 mark_all_ad_events <- function(data = gc_events){
-  val <- 0
-  mark <- 0
-  num <- 0
-  i <- 0
+  val <- 0 #holds the number of the marked event
+  mark <- 0 #the number an event gets marked by
+  num <- 0 #the location of a repeated event, calculted by adding i to the number of times it found a matching event
+  i <- 0 #the index start for the for loop
   all_day_events <- gc_events %>% 
                       mutate(Subject = str_replace_all(Subject, "\\\x94 | \\?", ""),#replaces bad symbols
                              title = str_replace_all(Subject, "\\\x94 | \\?", ""),
@@ -314,10 +314,10 @@ DISCLAMER: Part of it is broken due to the automatic resizing issue from the `to
 ```
 
 - added gifs:
-  - ```.html 
-  ![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/077f7eb0-ab76-4335-87fc-24817b8d9350/d7a459j-3968d5c1-9aec-46e4-953f-63d1fd3790ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.)
-  ```
-  - `()`: shows preview of link if there is no link text and it is a gif
+  - `![](link)`
+    - `()`: shows preview of link if there is no link text and it is a gif
+  - `<img src =gif></img>`
+   - `<img></img>` will display any link it is given to and can also display animated gifs, depending on your webrowser they might break though.
 
 - added images through html
   - ```.html

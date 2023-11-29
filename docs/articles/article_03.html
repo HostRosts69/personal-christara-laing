@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>personal-christara-laing - Chapter 2: Printing a Chessboard</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//images/hello.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">personal-christara-laing</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../articles/article_01.html" rel="" target="">
+ <span class="menu-text">Reversing Arrays</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../articles/article_02.html" rel="" target="">
+ <span class="menu-text">My Additons</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../articles/GC_calender/index.html" rel="" target="">
+ <span class="menu-text">GC Calender</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Articles</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-articles">    
+        <li>
+    <a class="dropdown-item" href="../articles/article_01.html" rel="" target="">
+ <span class="dropdown-text">Reversing Arrays in JS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../articles/article_03.html" rel="" target="">
+ <span class="dropdown-text">Checkerboard in JS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../articles/article_02.html" rel="" target="">
+ <span class="dropdown-text">My Additons</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-into-the-problem" id="toc-introduction-into-the-problem" class="nav-link active" data-scroll-target="#introduction-into-the-problem">Introduction into The Problem:</a></li>
+  <li><a href="#part-1-making-a-for-loop" id="toc-part-1-making-a-for-loop" class="nav-link" data-scroll-target="#part-1-making-a-for-loop">Part 1: Making a For Loop:</a></li>
+  <li><a href="#part-2-making-a-if-statement" id="toc-part-2-making-a-if-statement" class="nav-link" data-scroll-target="#part-2-making-a-if-statement">Part 2: Making a if Statement</a></li>
+  <li><a href="#part-3-adding-functionality-to-the-if-statment" id="toc-part-3-adding-functionality-to-the-if-statment" class="nav-link" data-scroll-target="#part-3-adding-functionality-to-the-if-statment">Part 3: Adding Functionality to the If Statment:</a></li>
+  <li><a href="#part-4-the-finishing-touch" id="toc-part-4-the-finishing-touch" class="nav-link" data-scroll-target="#part-4-the-finishing-touch">Part 4: The Finishing Touch:</a></li>
+  <li><a href="#full-code" id="toc-full-code" class="nav-link" data-scroll-target="#full-code">Full Code:</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chapter 2: Printing a Chessboard</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction-into-the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-into-the-problem">Introduction into The Problem:</h2>
+<p>Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chessboard.</p>
+<p>Passing this string to <code>console.log()</code> should show something like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a># # # #</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-1-making-a-for-loop" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-making-a-for-loop">Part 1: Making a For Loop:</h2>
+<p>Since the size of the board will be determed outside of the loop lets call it: <code>size</code> and make it equal to <code>8</code> because that will be the length and width of our board</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>size <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Second we need to make a <code>for</code> loop in Javascript.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (index<span class="op">;</span> condition<span class="op">;</span> equation) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The loop needs a index, condition, and an equation to change the index by: - <strong>Index</strong>: the variable that starts out the equation and what it starts at - Ex: <code>let i = 0;</code> - <strong>Condition</strong>: the condition that has to be met for the for loop to <em>continue</em> functioning - Ex: <code>i &gt;= 8;</code> - <strong>Equation</strong>: the equation that updates the <em>index</em> eather to a lower or higher number, until the conditon is met - Ex: <code>i = 1+i;</code></p>
+<section id="our-for-loop" class="level4">
+<h4 class="anchored" data-anchor-id="our-for-loop">Our For Loop:</h4>
+<p>Since the loop will go on for the length of size, lets call our index <code>sizeL</code>: - <code>sizeL = size;</code>: is our <em>index</em> because <code>size</code> is the size of the board we need to produce - <code>sizeL &gt;= 1;</code>: is our <em>condition</em> because we need to stop it just short of 0 or else we overflow and add another colum. - <code>sizeL = sizeL-1;</code>: is our <em>equation</em> as we need to count down from <code>sizeL</code> to reach 1, as sizeL will always be greater than or equal to 1.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>size <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> sizeL <span class="op">=</span> size<span class="op">;</span> sizeL <span class="op">&gt;=</span> <span class="dv">1</span><span class="op">;</span> sizeL <span class="op">=</span> sizeL <span class="op">-</span> <span class="dv">1</span>) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="part-2-making-a-if-statement" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-making-a-if-statement">Part 2: Making a if Statement</h2>
+<p>We need an <code>if</code> statement to check if we are on an even or odd row so we can change up the patterns and reverse them.</p>
+<p>An <code>if</code> statment needs a <em>conditon</em> attached to it, to decied if one action needs to be done over another.</p>
+<ul>
+<li><code>if()</code>:
+<ul>
+<li><strong>Condition</strong>: the equation/operation that returns a <em>True</em> or <em>False</em> value that the if statment uses to decide what action should be preformed</li>
+<li><strong>True</strong>: the action done if the condition is <em>True</em></li>
+<li><strong>False(Else)</strong>: the action done if a conditon is <em>False</em></li>
+</ul></li>
+</ul>
+<section id="our-if-statment" class="level4">
+<h4 class="anchored" data-anchor-id="our-if-statment">Our if Statment:</h4>
+<ul>
+<li><code>sizeL % 2 == 0</code>: the equation that returns a <em>True</em> or <em>False</em> value to our if statment
+<ul>
+<li><code>sizeL</code>: the size of the position we are in in the length of the rows</li>
+<li><code>%</code>: divides and then returns the remainder of solution
+<ul>
+<li><code>2</code>: because all even numbers are divisable by 2 with no remainders</li>
+</ul></li>
+<li><code>==</code>: an operator that tells if a string or number is the same as another
+<ul>
+<li><code>0</code>: because if the remainder is 0 then it was fully dividsable by 2 making it even</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>size <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> sizeL <span class="op">=</span> size<span class="op">;</span> sizeL <span class="op">&gt;=</span> <span class="dv">1</span><span class="op">;</span> sizeL <span class="op">=</span> sizeL <span class="op">-</span> <span class="dv">1</span>) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (sizeL <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="part-3-adding-functionality-to-the-if-statment" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-adding-functionality-to-the-if-statment">Part 3: Adding Functionality to the If Statment:</h2>
+<ul>
+<li><code>if(){}</code>: runs this code when condition is <em>True</em>
+<ul>
+<li><code>let length = size;</code>: creates a variable called length that takes it’s value from size (8)</li>
+<li><code>While()</code>: a loop that continues when the condition is met and only stops when the condition is not met
+<ul>
+<li><code>length &gt;= 1</code>: condition that says when <code>length</code> is greater than or equal to 1 then continue the loop</li>
+<li><code>if(){}</code>: if loop that decides what symbols to produce
+<ul>
+<li><code>length % 2 == 0</code>: if the remainder of <code>length</code> divided by 2 is equal to 0 then it is <em>True</em></li>
+<li><code>heck</code>: the variable that holds the string of symbols so they can be printed later</li>
+<li><em>True</em>:
+<ul>
+<li><code>heck = heck + "#";</code>: the code called to add a “#” to the variable <code>heck</code> when ever <code>length % 2 == 0</code> is <em>True</em>(is even)</li>
+</ul></li>
+<li><em>False</em>:
+<ul>
+<li><code>heck = heck + " ";</code>: adds an empty space to the <code>heck</code> variable if <code>length % 2 == 0</code> is <em>False</em>(not even)</li>
+</ul></li>
+<li><code>length = length - 1</code>: after the symbol from the <code>if</code> statment is added it tells it to subtract one from length for the next symbol in the row</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><code>else{}</code>: runs code if condition is <em>False</em>:
+<ul>
+<li><code>let length = size;</code>: creates a variable called length that takes it’s value from size (8)
+<ul>
+<li><code>While()</code>: a loop that continues when the condition is met and only stops when the condition is not met
+<ul>
+<li><code>length &gt;= 1</code>: condition that says when <code>length</code> is greater than or equal to 1 then continue the loop</li>
+<li><code>if(){}</code>: if loop that decides what symbols to produce
+<ul>
+<li><code>length % 2 == 0</code>: if the remainder of <code>length</code> divided by 2 is equal to 0 then it is <em>True</em></li>
+<li><code>heck</code>: the variable that holds the string of symbols so they can be printed later</li>
+<li><em>True</em>:
+<ul>
+<li><code>heck = heck + " ";</code>: the code called to add a “#” to the variable <code>heck</code> when ever <code>length % 2 == 0</code> is <em>True</em>(is even)</li>
+</ul></li>
+<li><em>False</em>:
+<ul>
+<li><code>heck = heck + "#";</code>: adds an empty space to the <code>heck</code> variable if <code>length % 2 == 0</code> is <em>False</em>(not even)</li>
+</ul></li>
+<li><code>length = length - 1</code>: after the symbol from the <code>if</code> statment is added it tells it to subtract one from length for the next symbol in the row</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>To summarize the <code>if</code> adds “#” on evens and ” ” on odds, while the <code>else</code> adds ” ” on evens and “#” on odds.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>size <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> sizeL <span class="op">=</span> size<span class="op">;</span> sizeL <span class="op">&gt;=</span> <span class="dv">1</span><span class="op">;</span> sizeL <span class="op">=</span> sizeL <span class="op">-</span> <span class="dv">1</span>) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (sizeL <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> length <span class="op">=</span> size<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> (length <span class="op">&gt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (length <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>) {</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">"#"</span><span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">else</span> {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            length <span class="op">=</span> length <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> length <span class="op">=</span> size<span class="op">;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> (length <span class="op">&gt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (length <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">"#"</span><span class="op">;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">else</span> {</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>                heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>            length <span class="op">=</span> length <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="part-4-the-finishing-touch" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-the-finishing-touch">Part 4: The Finishing Touch:</h2>
+<p>Since the for loop is making a string called <code>heck</code> with the pattern we need we aren’t finished because it isn’t in multiple lines.</p>
+<p>So to fix this issue we add a line of code near the end of the for loop: - <code>heck = heck + "\n";</code>: adds a <code>\n</code> to the string which translates to making a new line</p>
+<p>Since it is near the end it will add it after each row of the chessboard is made, spliting each row into it’s own seprate line.</p>
+<p>Then lastly, we <code>console.log()</code> the variable <code>heck</code>. - <code>console.log()</code>: prints what ever you put into, it into the console.</p>
+</section>
+<section id="full-code" class="level2">
+<h2 class="anchored" data-anchor-id="full-code">Full Code:</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>due to an ojs error we had to put it in a function and change <code>size</code> to <code>boardSize</code></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-startfrom="159" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 158;"><span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a>boardSize <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a>checkerboard <span class="op">=</span> <span class="kw">function</span>(size <span class="op">=</span> boardSize){</span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> heck <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> sizeL <span class="op">=</span> size<span class="op">;</span> sizeL <span class="op">&gt;=</span> <span class="dv">1</span><span class="op">;</span> sizeL <span class="op">=</span> sizeL <span class="op">-</span> <span class="dv">1</span>) {</span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (sizeL <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>){</span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> length <span class="op">=</span> size<span class="op">;</span></span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> (length <span class="op">&gt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (length <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>) {</span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>                    heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">"#"</span><span class="op">;</span></span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>                } <span class="cf">else</span> {</span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>                    heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>                length <span class="op">=</span> length <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> length <span class="op">=</span> size<span class="op">;</span></span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> (length <span class="op">&gt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (length <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>                    heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">"#"</span><span class="op">;</span></span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a>                } <span class="cf">else</span> {</span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a>                    heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">" "</span><span class="op">;</span></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-184"><a href="#cb7-184" aria-hidden="true" tabindex="-1"></a>                length <span class="op">=</span> length <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb7-185"><a href="#cb7-185" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb7-186"><a href="#cb7-186" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-187"><a href="#cb7-187" aria-hidden="true" tabindex="-1"></a>        heck <span class="op">=</span> heck <span class="op">+</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span><span class="op">;</span></span>
+<span id="cb7-188"><a href="#cb7-188" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-189"><a href="#cb7-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-190"><a href="#cb7-190" aria-hidden="true" tabindex="-1"></a>    <span class="co">//console.log(heck);</span></span>
+<span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> heck<span class="op">;</span></span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a><span class="fu">checkerboard</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a># # # # </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a> # # # #</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a># # # #</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"boardSize = 8;\ncheckerboard = function(size = boardSize){\n    var heck = \"\";\n    for (let sizeL = size; sizeL >= 1; sizeL = sizeL - 1) {\n        if (sizeL % 2 == 0){\n            let length = size;\n            while (length >= 1) {\n                if (length % 2 != 0) {\n                    heck = heck + \"#\";\n                } else {\n                    heck = heck + \" \";\n                }\n\n                length = length - 1;\n            }\n\n        } else {\n            let length = size;\n            while (length >= 1) {\n                if (length % 2 == 0) {\n                    heck = heck + \"#\";\n                } else {\n                    heck = heck + \" \";\n                }\n\n                length = length - 1;\n            }\n        }\n        heck = heck + \"\\n\";\n    }\n\n    //console.log(heck);\n    return heck;\n}\ncheckerboard();\n"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../articles";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

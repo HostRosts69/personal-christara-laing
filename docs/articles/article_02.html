@@ -138,10 +138,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../articles/GC_calender/index.html" rel="" target="">
  <span class="menu-text">GC Calender</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../posts/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Articles</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-articles">    
+        <li>
+    <a class="dropdown-item" href="../articles/article_01.html" rel="" target="">
+ <span class="dropdown-text">Reversing Arrays in JS</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../articles/article_03.html" rel="" target="">
+ <span class="dropdown-text">Checkerboard in JS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../articles/article_02.html" rel="" target="">
+ <span class="dropdown-text">My Additons</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -304,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>
 <a href="https://hostrosts69.github.io/personal-christara-laing/GC_calender/index.qmd">This calender</a> is based on the Georgetown College’s <a href="GC_calender/assets/gcCalender.csv">csv</a> file that can be aquired on their <a href="https://www.georgetowncollege.edu/events">website</a>. The code was all done in R script as well.
 </p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode .r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(toastui)) <span class="fu">install.packages</span>(<span class="st">"toastui"</span>,<span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(toastui)) <span class="fu">install.packages</span> (<span class="st">"toastui"</span>,<span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>) <span class="co">#installs toastui if package isn't already installed</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
@@ -312,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(toastui)</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>gc_events <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"assets/gcCalender.csv"</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>gc_events <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"assets/gcCalender.csv"</span>)<span class="co">#reads the csv file from folder</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>all_day_events <span class="ot">&lt;-</span> gc_events <span class="sc">%&gt;%</span> </span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">filter</span>(<span class="st">`</span><span class="at">All day event</span><span class="st">`</span> <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
@@ -330,10 +345,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">arrange</span>(<span class="fu">desc</span>(Subject))</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co"># marks all the events</span></span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>mark_all_ad_events <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> gc_events){</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  val <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  mark <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  num <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  val <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co">#holds the number of the marked event</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  mark <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co">#the number an event gets marked by</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  num <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co">#the location of a repeated event, calculted by adding i to the number of times it found a matching event</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co">#the index start for the for loop</span></span>
 <span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  all_day_events <span class="ot">&lt;-</span> gc_events <span class="sc">%&gt;%</span> </span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">str_replace_all</span>(Subject, <span class="st">"</span><span class="sc">\\\x94</span><span class="st"> | </span><span class="sc">\\</span><span class="st">?"</span>, <span class="st">""</span>),<span class="co">#replaces bad symbols</span></span>
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                             <span class="at">title =</span> <span class="fu">str_replace_all</span>(Subject, <span class="st">"</span><span class="sc">\\\x94</span><span class="st"> | </span><span class="sc">\\</span><span class="st">?"</span>, <span class="st">""</span>),</span>
@@ -511,12 +526,16 @@ Important
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/audio&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>added gifs:</p>
 <ul>
-<li><div class="sourceCode" id="cb9"><pre class="sourceCode .html code-with-copy"><code class="sourceCode djangotemplate"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/077f7eb0-ab76-4335-87fc-24817b8d9350/d7a459j-3968d5c1-9aec-46e4-953f-63d1fd3790ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><code>![](link)</code>
+<ul>
 <li><code>()</code>: shows preview of link if there is no link text and it is a gif</li>
+</ul></li>
+<li><code>&lt;img src =gif&gt;&lt;/img&gt;</code></li>
+<li><code>&lt;img&gt;&lt;/img&gt;</code> will display any link it is given to and can also display animated gifs, depending on your webrowser they might break though.</li>
 </ul></li>
 <li><p>added images through html</p>
 <ul>
-<li><div class="sourceCode" id="cb10"><pre class="sourceCode .html code-with-copy"><code class="sourceCode djangotemplate"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">src</span> <span class="ot">=</span> <span class="st">"link"</span><span class="kw">&gt;&lt;/img&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb9"><pre class="sourceCode .html code-with-copy"><code class="sourceCode djangotemplate"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">src</span> <span class="ot">=</span> <span class="st">"link"</span><span class="kw">&gt;&lt;/img&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 <li><p>for the essays changed font using on page css</p></li>
 <li><p>changed backgrounds for secret using css</p></li>

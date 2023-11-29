@@ -18,8 +18,14 @@ website:
         text: My Additons
       - href: articles/GC_calender/index.qmd
         text: GC Calender
-      - href: posts/index.qmd
-        text: Blog
+      - text: Articles
+        menu:
+          - text: Reversing Arrays in JS
+            href:  articles/article_01.qmd
+          - text: Checkerboard in JS
+            href:  articles/article_03.qmd
+          - text: My Additons
+            href: articles/article_02.qmd
     
 
 format:
@@ -29,9 +35,3 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-
-
-
-
-
-
