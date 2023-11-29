@@ -302,5 +302,5 @@ calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, useDetailPopup = T
 ```
 
 ::: {.callout-important}
-DISCLAMER: Part of it is broken due to the automatic resizing issue.
+DISCLAMER: Part of it is broken due to the automatic resizing issue from the `toastui` `calender.js` file.
 :::
