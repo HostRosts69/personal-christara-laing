@@ -15,8 +15,6 @@ website:
       - href: articles/article_01.qmd
         text: Reversing Arrays
       - href: articles/article_02.qmd
-        text: My Additons
-      - href: articles/GC_calender/index.qmd
         text: GC Calender
       - text: Articles
         menu:
@@ -26,6 +24,8 @@ website:
             href:  articles/article_03.qmd
           - text: My Additons
             href: articles/article_02.qmd
+      - text: The Spooky Blog
+        href: posts/index.qmd
     
 
 format:
