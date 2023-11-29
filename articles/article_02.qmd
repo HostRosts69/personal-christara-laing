@@ -1,7 +1,8 @@
 ---
-title: "Small Point and Click through Windows"
+title: "My Additions to my Website:"
 ---
-
+# Major additions:
+## Small Point and Click through Windows:
 This is a small point and click I made it through quarto, js, and some css.
 
 In this, I learned how to move windows, create windows, and replace windows.
@@ -33,7 +34,7 @@ In this, I learned how to move windows, create windows, and replace windows.
                 var ranMoveTime = 5;
                 while (ranMoveTime >= 0){
                     stopPlease.moveTo(getRandomInt(1080), getRandomInt(1080));
-                    ranMoveTime -= 1
+                    ranMoveTime -= 1;
                 }
             });
         }
@@ -67,3 +68,239 @@ In this, I learned how to move windows, create windows, and replace windows.
         return Math.floor(Math.random() * max);
     }
 ```
+### Explaing Window Alert:
+```.js
+window.alert();
+```
+`window.alert()` is a native js function that instructs the browser to display a window and waits for the user to dismiss the small window on the screen before continuing
+
+for more information read here at <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">mozilla:js Window.alert</a>.
+
+### Window Location Replace:
+```.js
+ window.location.replace();
+```
+Replaces the window specified or the previous window with the window you specify for the function to load.
+
+### Move To:
+```.js
+while (ranMoveTime >= 0){
+                    stopPlease.moveTo(getRandomInt(1080), getRandomInt(1080));
+                    ranMoveTime -= 1;
+                }
+```
+The whole loop is to move the window in multiple locations random locations before stoping that it looks like the window is glitching out.
+
+`.moveTo` specifies a point(x,y in px) on the computer for a window to move to when displayed.
+
+### Interact Variables:
+```.js
+interact1 = false;
+```
+All the `interact` variables are a way to stop the window alert from appering more than once as you scan over the webpage. This is so you don't get any annoying feedback or repeats.
+
+
+## add.EventListener:
+```.js
+document.getElementById("secret").addEventListener("dblclick", function(event) {
+                secretDouble();
+            });
+```
+`document.getElementById()` first gets all the document items with the class "secret".
+
+Then `.addEventListener()` adds the event listener(a user or program event that triggers another function) to a document item. The event being listened for in this case is a double-click(`dblclick`) on an item with the class `"secret"`. It also adds a function to be played when that event listener happens called, `secretDouble()`.
+
+
+## GC Calender:
+<p><a href = "https://hostrosts69.github.io/personal-christara-laing/GC_calender/index.qmd">This calender</a> is based on the Georgetown College's <a href= "GC_calender/assets/gcCalender.csv">csv</a> file that can be aquired on their <a href= "https://www.georgetowncollege.edu/events">website</a>.
+The code was all done in R script as well.</p>
+
+```.r
+if(!require(toastui)) install.packages("toastui",repos = "http://cran.us.r-project.org")
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(devtools)
+library(toastui)
+
+gc_events <- read_csv("assets/gcCalender.csv")
+
+all_day_events <- gc_events %>% 
+                    filter(`All day event` == TRUE)
+# a filter of all the day(s) events to filter by
+all_day_events <- all_day_events %>% 
+                    mutate(`Start Date` = dmy(`Start Date`),
+                           startYear = year(`Start Date`),
+                           startDay = day(`Start Date`),
+                           startMonth = month(`Start Date`),
+                           
+                           `End Date` = dmy(`End Date`),
+                           endYear = year(`End Date`),
+                           endDay = day(`End Date`),
+                           endMonth = month(`End Date`)) %>% 
+                    arrange(desc(Subject))
+# marks all the events
+mark_all_ad_events <- function(data = gc_events){
+  val <- 0
+  mark <- 0
+  num <- 0
+  i <- 0
+  all_day_events <- gc_events %>% 
+                      mutate(Subject = str_replace_all(Subject, "\\\x94 | \\?", ""),#replaces bad symbols
+                             title = str_replace_all(Subject, "\\\x94 | \\?", ""),
+                            `Start Date` = dmy(`Start Date`),
+                             startYear = year(`Start Date`),
+                             startDay = day(`Start Date`),
+                             startMonth = month(`Start Date`),
+                             
+                             `End Date` = dmy(`End Date`),
+                             endYear = year(`End Date`),
+                             endDay = day(`End Date`),
+                             endMonth = month(`End Date`)) %>% 
+                      arrange(desc(Subject))
+  
+  titles <- all_day_events$Subject
+  endDate_allDayEvent <- all_day_events$`End Date`
+
+  #Checks if the events coming after one another are related and if they are to mark them with a number
+  for (i in 1:(length(endDate_allDayEvent))) {
+    title1 <- titles[i]
+    title2 <- titles[i+1]
+    
+    date1 <- ymd(endDate_allDayEvent[i])
+    date2 <- ymd(endDate_allDayEvent[i+1])
+      num <- 0 + i
+      if (all_day_events$`All day event`[i] == TRUE & all_day_events$`All day event`[i+1] == TRUE & title1 == title2 & all_day_events$startYear[i] == all_day_events$startYear[i+1] & all_day_events$startMonth[i] == all_day_events$startMonth[i+1] & all_day_events$endDay[num]+1 == all_day_events$startDay[num+1] & is.na(all_day_events$startDay[num+1]) != TRUE){
+        num <- i + 0
+        val[num] <- mark
+      }else{
+        val[i] <- mark
+        mark  = mark + 1
+        }
+  }
+  all_day_events$value <- val
+  
+  #shorten all the groups
+  all_day_events <- all_day_events %>% 
+                        group_by(title, value) %>% 
+                        summarise(`Start Date`= min(`Start Date`),
+                        `End Date`= max(`End Date`),
+                        `Start Time`= first(na.omit(`Start Time` )),
+                        `End Time`= first(na.omit(`End Time`)),
+                        
+                        Street = first(na.omit(Street)),
+                        City = first(na.omit(City)),
+                        state_prov = first(na.omit(`State or Province`)),
+                        zip_postal = first(na.omit(`Zip or Postal Code`)),
+                        Country = first(na.omit(Country)),
+                        location = first(na.omit(Location)),
+                        
+                        body = first(na.omit(Description)),
+                        Categories = first(na.omit(Categories)),
+                        isAllday = first(na.omit(`All day event`)))
+  
+  # fixes strings so that they can have proper urls
+  all_day_events <- all_day_events %>% mutate(newloc = paste0(na.omit(c("<a href=\"", "https://maps.google.com.br/?q=", first(Street), ", ", first(City), ", ", first(state_prov), " ", first(zip_postal), ", ", first(Country), "\" >", first(location), "</a>")), collapse = ""),
+                               newloc = str_replace_all(newloc , pattern = "<a href=\"https:\\/\\/maps.google.com.br\\/\\?q=, ,  , \" ><\\/a>", replacement = ""),
+                               newloc = str_replace_all(newloc, pattern = ", ,  , ", replacement = paste0(c("Georgetown College, ", first(location)), collapse = "")),
+                               location = newloc,
+                               category = case_when(isAllday == "TRUE" ~ "allday",
+                                                    .default = "time")) 
+  
+  return(all_day_events)
+}
+
+# a way to hold on to the marked events
+all_day_events <- mark_all_ad_events()
+
+# the data gets mutated into a function with variables that the calander() command can read
+gc_cal_data <- function(){
+ all_day_events %>% 
+      mutate(
+        title = str_replace_all(title, "\\\x94 | \\?", "")) %>% 
+         unite(start, c(`Start Date`, `Start Time`), sep = " ", remove = TRUE) %>% 
+         unite(end, c(`End Date`, `End Time`), sep = " ", remove = TRUE) %>% 
+         mutate(start = ymd_hms(start, tz = "UTC"),
+                start = format(start, "%Y-%m-%d %H:%M:%S"),
+                end = ymd_hms(end, tz = ""),
+                end = format(end, "%Y-%m-%d %H:%M:%S")) %>% 
+     mutate(is_holiday = case_when(TRUE == str_detect(title, "[Hh]oliday") ~ "yes",
+                                 FALSE == str_detect(title, "[Hh]oliday") ~ "no"),
+           id = case_when(is_holiday == "yes" ~ 1,
+                          is_holiday == "no" ~ case_when(Categories == "Art" ~ 3,
+                                                         Categories == "Academics" ~ 2,
+                                                         Categories == "Equine Scholars" ~ 4,
+                                                         Categories == "Nexus" ~ 5,
+                                                         Categories == "Activities Council" ~ 5,
+                                                         .default = 4)
+                          ),
+           calendarId = id) %>% 
+    select(title, start, end, calendarId, id, body, location) 
+}
+
+# a function made to hold all the properties for the calender so it is able to be better understood by the cal_props() command
+cal_gc_props <- function() {
+  
+  props <- list(
+    list(
+      id = "1",
+      name = "Holidays & Closing",
+      color = "#000",
+      backgroundColor = "lightgray",
+      borderColor = "gray"
+    ),
+    list(
+      id = "2",
+      name = "Academics",
+      color = "#000",
+      backgroundColor = "#FFD700",
+      borderColor = "goldenrod3"
+    ),
+    list(
+      id = "3",
+      name = "Art",
+      color = "#000",
+      backgroundColor = "#AA336A",
+      borderColor = "#702963"
+    ),
+    list(
+      id = "4",
+      name = "Equine Scholars",
+      color = "#000",
+      backgroundColor = "#05CDCD",
+      borderColor = "#3b7cc6"
+    ),
+    list(
+      id = "5",
+      name = "Nexus",
+      color = "#000",
+      backgroundColor = "#EE0200",
+      borderColor = "firebrick"
+    ),
+    list(
+      id = "5",
+      name = "Activites Council",
+      color = "#000",
+      backgroundColor = "#FF9902",
+      borderColor = "darkorange3"
+    ),
+    list(
+      id = "6",
+      name = "Alumni",
+      color = "#000",
+      backgroundColor = "#EE82EE",
+      borderColor = "darkorchid2"
+    )
+  )
+  do.call("rbind", lapply(props, as.data.frame))
+}
+
+#displays the calander in a month format when all of the code finishes
+calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, useDetailPopup = TRUE, useCreationPopup = FALSE) %>%
+  cal_props(cal_gc_props())
+```
+
+::: {.callout-important}
+DISCLAMER: Part of it is broken due to the automatic resizing issue.
+:::

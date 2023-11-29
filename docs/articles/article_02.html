@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>personal-christara-laing - Small Point and Click through Windows</title>
+<title>personal-christara-laing - My Additions to my Website:</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,11 +128,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../articles/article_01.html" rel="" target="">
- <span class="menu-text">Reversing An Array</span></a>
+ <span class="menu-text">Reversing Arrays</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../404.html" rel="" target="">
- <span class="menu-text">Writing Your Own Loop</span></a>
+    <a class="nav-link active" href="../articles/article_02.html" rel="" target="" aria-current="page">
+ <span class="menu-text">My Additons</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../articles/GC_calender/index.html" rel="" target="">
@@ -155,14 +155,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#major-additions" id="toc-major-additions" class="nav-link active" data-scroll-target="#major-additions">Major additions:</a>
+  <ul class="collapse">
+  <li><a href="#small-point-and-click-through-windows" id="toc-small-point-and-click-through-windows" class="nav-link" data-scroll-target="#small-point-and-click-through-windows">Small Point and Click through Windows:</a>
+  <ul class="collapse">
+  <li><a href="#explaing-window-alert" id="toc-explaing-window-alert" class="nav-link" data-scroll-target="#explaing-window-alert">Explaing Window Alert:</a></li>
+  <li><a href="#window-location-replace" id="toc-window-location-replace" class="nav-link" data-scroll-target="#window-location-replace">Window Location Replace:</a></li>
+  <li><a href="#move-to" id="toc-move-to" class="nav-link" data-scroll-target="#move-to">Move To:</a></li>
+  <li><a href="#interact-variables" id="toc-interact-variables" class="nav-link" data-scroll-target="#interact-variables">Interact Variables:</a></li>
+  </ul></li>
+  <li><a href="#add.eventlistener" id="toc-add.eventlistener" class="nav-link" data-scroll-target="#add.eventlistener">add.EventListener:</a></li>
+  <li><a href="#gc-calender" id="toc-gc-calender" class="nav-link" data-scroll-target="#gc-calender">GC Calender:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Small Point and Click through Windows</h1>
+<h1 class="title">My Additions to my Website:</h1>
 </div>
 
 
@@ -177,6 +194,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<section id="major-additions" class="level1">
+<h1>Major additions:</h1>
+<section id="small-point-and-click-through-windows" class="level2">
+<h2 class="anchored" data-anchor-id="small-point-and-click-through-windows">Small Point and Click through Windows:</h2>
 <p>This is a small point and click I made it through quarto, js, and some css.</p>
 <p>In this, I learned how to move windows, create windows, and replace windows.</p>
 <div class="code-with-filename">
@@ -209,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                <span class="kw">var</span> ranMoveTime <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">while</span> (ranMoveTime <span class="op">&gt;=</span> <span class="dv">0</span>){</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                    stopPlease<span class="op">.</span><span class="fu">moveTo</span>(<span class="fu">getRandomInt</span>(<span class="dv">1080</span>)<span class="op">,</span> <span class="fu">getRandomInt</span>(<span class="dv">1080</span>))<span class="op">;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                    ranMoveTime <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                    ranMoveTime <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                }</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            })<span class="op">;</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        }</span>
@@ -243,8 +264,245 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> max)<span class="op">;</span></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="explaing-window-alert" class="level3">
+<h3 class="anchored" data-anchor-id="explaing-window-alert">Explaing Window Alert:</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">alert</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>window.alert()</code> is a native js function that instructs the browser to display a window and waits for the user to dismiss the small window on the screen before continuing</p>
+<p>for more information read here at <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">mozilla:js Window.alert</a>.</p>
+</section>
+<section id="window-location-replace" class="level3">
+<h3 class="anchored" data-anchor-id="window-location-replace">Window Location Replace:</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="fu">replace</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replaces the window specified or the previous window with the window you specify for the function to load.</p>
+</section>
+<section id="move-to" class="level3">
+<h3 class="anchored" data-anchor-id="move-to">Move To:</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (ranMoveTime <span class="op">&gt;=</span> <span class="dv">0</span>){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                    stopPlease<span class="op">.</span><span class="fu">moveTo</span>(<span class="fu">getRandomInt</span>(<span class="dv">1080</span>)<span class="op">,</span> <span class="fu">getRandomInt</span>(<span class="dv">1080</span>))<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                    ranMoveTime <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The whole loop is to move the window in multiple locations random locations before stoping that it looks like the window is glitching out.</p>
+<p><code>.moveTo</code> specifies a point(x,y in px) on the computer for a window to move to when displayed.</p>
+</section>
+<section id="interact-variables" class="level3">
+<h3 class="anchored" data-anchor-id="interact-variables">Interact Variables:</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>interact1 <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>All the <code>interact</code> variables are a way to stop the window alert from appering more than once as you scan over the webpage. This is so you don’t get any annoying feedback or repeats.</p>
+</section>
+</section>
+<section id="add.eventlistener" class="level2">
+<h2 class="anchored" data-anchor-id="add.eventlistener">add.EventListener:</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"secret"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"dblclick"</span><span class="op">,</span> <span class="kw">function</span>(<span class="bu">event</span>) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                <span class="fu">secretDouble</span>()<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>            })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>document.getElementById()</code> first gets all the document items with the class “secret”.</p>
+<p>Then <code>.addEventListener()</code> adds the event listener(a user or program event that triggers another function) to a document item. The event being listened for in this case is a double-click(<code>dblclick</code>) on an item with the class <code>"secret"</code>. It also adds a function to be played when that event listener happens called, <code>secretDouble()</code>.</p>
+</section>
+<section id="gc-calender" class="level2">
+<h2 class="anchored" data-anchor-id="gc-calender">GC Calender:</h2>
+<p>
+<a href="https://hostrosts69.github.io/personal-christara-laing/GC_calender/index.qmd">This calender</a> is based on the Georgetown College’s <a href="GC_calender/assets/gcCalender.csv">csv</a> file that can be aquired on their <a href="https://www.georgetowncollege.edu/events">website</a>. The code was all done in R script as well.
+</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode .r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(toastui)) <span class="fu">install.packages</span>(<span class="st">"toastui"</span>,<span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(toastui)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>gc_events <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"assets/gcCalender.csv"</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>all_day_events <span class="ot">&lt;-</span> gc_events <span class="sc">%&gt;%</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">filter</span>(<span class="st">`</span><span class="at">All day event</span><span class="st">`</span> <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># a filter of all the day(s) events to filter by</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>all_day_events <span class="ot">&lt;-</span> all_day_events <span class="sc">%&gt;%</span> </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">dmy</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                           <span class="at">startYear =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                           <span class="at">startDay =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>                           <span class="at">startMonth =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>                           </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                           <span class="st">`</span><span class="at">End Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">dmy</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                           <span class="at">endYear =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                           <span class="at">endDay =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                           <span class="at">endMonth =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">arrange</span>(<span class="fu">desc</span>(Subject))</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co"># marks all the events</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>mark_all_ad_events <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> gc_events){</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  val <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  mark <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  num <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  all_day_events <span class="ot">&lt;-</span> gc_events <span class="sc">%&gt;%</span> </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">str_replace_all</span>(Subject, <span class="st">"</span><span class="sc">\\\x94</span><span class="st"> | </span><span class="sc">\\</span><span class="st">?"</span>, <span class="st">""</span>),<span class="co">#replaces bad symbols</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                             <span class="at">title =</span> <span class="fu">str_replace_all</span>(Subject, <span class="st">"</span><span class="sc">\\\x94</span><span class="st"> | </span><span class="sc">\\</span><span class="st">?"</span>, <span class="st">""</span>),</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">Start Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">dmy</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>                             <span class="at">startYear =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                             <span class="at">startDay =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>                             <span class="at">startMonth =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>                             </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>                             <span class="st">`</span><span class="at">End Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">dmy</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>                             <span class="at">endYear =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>                             <span class="at">endDay =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>                             <span class="at">endMonth =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">arrange</span>(<span class="fu">desc</span>(Subject))</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  titles <span class="ot">&lt;-</span> all_day_events<span class="sc">$</span>Subject</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  endDate_allDayEvent <span class="ot">&lt;-</span> all_day_events<span class="sc">$</span><span class="st">`</span><span class="at">End Date</span><span class="st">`</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Checks if the events coming after one another are related and if they are to mark them with a number</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(endDate_allDayEvent))) {</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    title1 <span class="ot">&lt;-</span> titles[i]</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    title2 <span class="ot">&lt;-</span> titles[i<span class="sc">+</span><span class="dv">1</span>]</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    date1 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(endDate_allDayEvent[i])</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    date2 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(endDate_allDayEvent[i<span class="sc">+</span><span class="dv">1</span>])</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>      num <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="sc">+</span> i</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (all_day_events<span class="sc">$</span><span class="st">`</span><span class="at">All day event</span><span class="st">`</span>[i] <span class="sc">==</span> <span class="cn">TRUE</span> <span class="sc">&amp;</span> all_day_events<span class="sc">$</span><span class="st">`</span><span class="at">All day event</span><span class="st">`</span>[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">==</span> <span class="cn">TRUE</span> <span class="sc">&amp;</span> title1 <span class="sc">==</span> title2 <span class="sc">&amp;</span> all_day_events<span class="sc">$</span>startYear[i] <span class="sc">==</span> all_day_events<span class="sc">$</span>startYear[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">&amp;</span> all_day_events<span class="sc">$</span>startMonth[i] <span class="sc">==</span> all_day_events<span class="sc">$</span>startMonth[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">&amp;</span> all_day_events<span class="sc">$</span>endDay[num]<span class="sc">+</span><span class="dv">1</span> <span class="sc">==</span> all_day_events<span class="sc">$</span>startDay[num<span class="sc">+</span><span class="dv">1</span>] <span class="sc">&amp;</span> <span class="fu">is.na</span>(all_day_events<span class="sc">$</span>startDay[num<span class="sc">+</span><span class="dv">1</span>]) <span class="sc">!=</span> <span class="cn">TRUE</span>){</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        num <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">0</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        val[num] <span class="ot">&lt;-</span> mark</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>      }<span class="cf">else</span>{</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>        val[i] <span class="ot">&lt;-</span> mark</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        mark  <span class="ot">=</span> mark <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>  all_day_events<span class="sc">$</span>value <span class="ot">&lt;-</span> val</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>  <span class="co">#shorten all the groups</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>  all_day_events <span class="ot">&lt;-</span> all_day_events <span class="sc">%&gt;%</span> </span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">group_by</span>(title, value) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span><span class="ot">=</span> <span class="fu">min</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>),</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>                        <span class="st">`</span><span class="at">End Date</span><span class="st">`</span><span class="ot">=</span> <span class="fu">max</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>),</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>                        <span class="st">`</span><span class="at">Start Time</span><span class="st">`</span><span class="ot">=</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(<span class="st">`</span><span class="at">Start Time</span><span class="st">`</span> )),</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>                        <span class="st">`</span><span class="at">End Time</span><span class="st">`</span><span class="ot">=</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(<span class="st">`</span><span class="at">End Time</span><span class="st">`</span>)),</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>                        <span class="at">Street =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(Street)),</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>                        <span class="at">City =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(City)),</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>                        <span class="at">state_prov =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(<span class="st">`</span><span class="at">State or Province</span><span class="st">`</span>)),</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>                        <span class="at">zip_postal =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(<span class="st">`</span><span class="at">Zip or Postal Code</span><span class="st">`</span>)),</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>                        <span class="at">Country =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(Country)),</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>                        <span class="at">location =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(Location)),</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>                        <span class="at">body =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(Description)),</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>                        <span class="at">Categories =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(Categories)),</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>                        <span class="at">isAllday =</span> <span class="fu">first</span>(<span class="fu">na.omit</span>(<span class="st">`</span><span class="at">All day event</span><span class="st">`</span>)))</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>  <span class="co"># fixes strings so that they can have proper urls</span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>  all_day_events <span class="ot">&lt;-</span> all_day_events <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">newloc =</span> <span class="fu">paste0</span>(<span class="fu">na.omit</span>(<span class="fu">c</span>(<span class="st">"&lt;a href=</span><span class="sc">\"</span><span class="st">"</span>, <span class="st">"https://maps.google.com.br/?q="</span>, <span class="fu">first</span>(Street), <span class="st">", "</span>, <span class="fu">first</span>(City), <span class="st">", "</span>, <span class="fu">first</span>(state_prov), <span class="st">" "</span>, <span class="fu">first</span>(zip_postal), <span class="st">", "</span>, <span class="fu">first</span>(Country), <span class="st">"</span><span class="sc">\"</span><span class="st"> &gt;"</span>, <span class="fu">first</span>(location), <span class="st">"&lt;/a&gt;"</span>)), <span class="at">collapse =</span> <span class="st">""</span>),</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>                               <span class="at">newloc =</span> <span class="fu">str_replace_all</span>(newloc , <span class="at">pattern =</span> <span class="st">"&lt;a href=</span><span class="sc">\"</span><span class="st">https:</span><span class="sc">\\</span><span class="st">/</span><span class="sc">\\</span><span class="st">/maps.google.com.br</span><span class="sc">\\</span><span class="st">/</span><span class="sc">\\</span><span class="st">?q=, ,  , </span><span class="sc">\"</span><span class="st"> &gt;&lt;</span><span class="sc">\\</span><span class="st">/a&gt;"</span>, <span class="at">replacement =</span> <span class="st">""</span>),</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>                               <span class="at">newloc =</span> <span class="fu">str_replace_all</span>(newloc, <span class="at">pattern =</span> <span class="st">", ,  , "</span>, <span class="at">replacement =</span> <span class="fu">paste0</span>(<span class="fu">c</span>(<span class="st">"Georgetown College, "</span>, <span class="fu">first</span>(location)), <span class="at">collapse =</span> <span class="st">""</span>)),</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>                               <span class="at">location =</span> newloc,</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>                               <span class="at">category =</span> <span class="fu">case_when</span>(isAllday <span class="sc">==</span> <span class="st">"TRUE"</span> <span class="sc">~</span> <span class="st">"allday"</span>,</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">.default =</span> <span class="st">"time"</span>)) </span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(all_day_events)</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a><span class="co"># a way to hold on to the marked events</span></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>all_day_events <span class="ot">&lt;-</span> <span class="fu">mark_all_ad_events</span>()</span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a><span class="co"># the data gets mutated into a function with variables that the calander() command can read</span></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>gc_cal_data <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a> all_day_events <span class="sc">%&gt;%</span> </span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(</span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="fu">str_replace_all</span>(title, <span class="st">"</span><span class="sc">\\\x94</span><span class="st"> | </span><span class="sc">\\</span><span class="st">?"</span>, <span class="st">""</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>         <span class="fu">unite</span>(start, <span class="fu">c</span>(<span class="st">`</span><span class="at">Start Date</span><span class="st">`</span>, <span class="st">`</span><span class="at">Start Time</span><span class="st">`</span>), <span class="at">sep =</span> <span class="st">" "</span>, <span class="at">remove =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>         <span class="fu">unite</span>(end, <span class="fu">c</span>(<span class="st">`</span><span class="at">End Date</span><span class="st">`</span>, <span class="st">`</span><span class="at">End Time</span><span class="st">`</span>), <span class="at">sep =</span> <span class="st">" "</span>, <span class="at">remove =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>         <span class="fu">mutate</span>(<span class="at">start =</span> <span class="fu">ymd_hms</span>(start, <span class="at">tz =</span> <span class="st">"UTC"</span>),</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>                <span class="at">start =</span> <span class="fu">format</span>(start, <span class="st">"%Y-%m-%d %H:%M:%S"</span>),</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>                <span class="at">end =</span> <span class="fu">ymd_hms</span>(end, <span class="at">tz =</span> <span class="st">""</span>),</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>                <span class="at">end =</span> <span class="fu">format</span>(end, <span class="st">"%Y-%m-%d %H:%M:%S"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(<span class="at">is_holiday =</span> <span class="fu">case_when</span>(<span class="cn">TRUE</span> <span class="sc">==</span> <span class="fu">str_detect</span>(title, <span class="st">"[Hh]oliday"</span>) <span class="sc">~</span> <span class="st">"yes"</span>,</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>                                 <span class="cn">FALSE</span> <span class="sc">==</span> <span class="fu">str_detect</span>(title, <span class="st">"[Hh]oliday"</span>) <span class="sc">~</span> <span class="st">"no"</span>),</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>           <span class="at">id =</span> <span class="fu">case_when</span>(is_holiday <span class="sc">==</span> <span class="st">"yes"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>                          is_holiday <span class="sc">==</span> <span class="st">"no"</span> <span class="sc">~</span> <span class="fu">case_when</span>(Categories <span class="sc">==</span> <span class="st">"Art"</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>                                                         Categories <span class="sc">==</span> <span class="st">"Academics"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>                                                         Categories <span class="sc">==</span> <span class="st">"Equine Scholars"</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>                                                         Categories <span class="sc">==</span> <span class="st">"Nexus"</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>                                                         Categories <span class="sc">==</span> <span class="st">"Activities Council"</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a>                                                         <span class="at">.default =</span> <span class="dv">4</span>)</span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>                          ),</span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>           <span class="at">calendarId =</span> id) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(title, start, end, calendarId, id, body, location) </span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="co"># a function made to hold all the properties for the calender so it is able to be better understood by the cal_props() command</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>cal_gc_props <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>  props <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"1"</span>,</span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Holidays &amp; Closing"</span>,</span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"lightgray"</span>,</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"gray"</span></span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"2"</span>,</span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Academics"</span>,</span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#FFD700"</span>,</span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"goldenrod3"</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"3"</span>,</span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Art"</span>,</span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#AA336A"</span>,</span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"#702963"</span></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"4"</span>,</span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Equine Scholars"</span>,</span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#05CDCD"</span>,</span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"#3b7cc6"</span></span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"5"</span>,</span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Nexus"</span>,</span>
+<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#EE0200"</span>,</span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"firebrick"</span></span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"5"</span>,</span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Activites Council"</span>,</span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#FF9902"</span>,</span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"darkorange3"</span></span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="st">"6"</span>,</span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Alumni"</span>,</span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"#000"</span>,</span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>      <span class="at">backgroundColor =</span> <span class="st">"#EE82EE"</span>,</span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>      <span class="at">borderColor =</span> <span class="st">"darkorchid2"</span></span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(<span class="st">"rbind"</span>, <span class="fu">lapply</span>(props, as.data.frame))</span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a><span class="co">#displays the calander in a month format when all of the code finishes</span></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a><span class="fu">calendar</span>(<span class="fu">gc_cal_data</span>(), <span class="at">navigation =</span> <span class="cn">TRUE</span>, <span class="at">isReadOnly =</span> <span class="cn">TRUE</span>, <span class="at">useDetailPopup =</span> <span class="cn">TRUE</span>, <span class="at">useCreationPopup =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cal_props</span>(<span class="fu">cal_gc_props</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DISCLAMER: Part of it is broken due to the automatic resizing issue.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

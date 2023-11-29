@@ -13,9 +13,9 @@ website:
       - href: about.qmd
         text: About Me
       - href: articles/article_01.qmd
-        text: Reversing An Array
-      - href: 404.qmd
-        text: Writing Your Own Loop
+        text: Reversing Arrays
+      - href: articles/article_02.qmd
+        text: My Additons
       - href: articles/GC_calender/index.qmd
         text: GC Calender
       - href: posts/index.qmd
