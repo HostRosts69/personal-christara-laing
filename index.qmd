@@ -12,3 +12,4 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ![](https://media1.giphy.com/media/qLytYr0b6Fsjj4MyYm/giphy.gif?cid=ecf05e47w0q0sp66s4gx34dw376oxpovm5ckurwb99ugqyhl&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
+

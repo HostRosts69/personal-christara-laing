@@ -21,25 +21,67 @@
     "text": "This is a small point and click I made it through quarto, js, and some css.\nIn this, I learned how to move windows, create windows, and replace windows.\n\n\nShortPointAndClick.js\n\n    var interact1 = false;\n    function secretMove(done = interact1){\n        if(done){\n            return ;\n        } else {\n            window.alert(\"You really aren't suppost to be here... be careful\");\n            window.alert(\"And please don't double click the eyes...\");\n            document.getElementById(\"secret\").addEventListener(\"dblclick\", function(event) {\n                secretDouble();\n            });\n            interact1 = true;\n        }\n\n    };\n\n    // opens new screen for the rest of the secret\n    var interact2 = false;\n    function secretDouble(){\n        if(interact2){\n            return ;\n        }else{\n            stopPlease = window.open(\"secret/you-need-to-stop.html\", \"\", \"width=500, height=600\");\n            stopPlease.addEventListener(\"load\", (event) =&gt; {\n                var ranMoveTime = 5;\n                while (ranMoveTime &gt;= 0){\n                    stopPlease.moveTo(getRandomInt(1080), getRandomInt(1080));\n                    ranMoveTime -= 1\n                }\n            });\n        }\n    };\n\n    // prompt telling you how to go deeper on window screen\n    var interact3 = false;\n    function goDeeper(){\n        if (interact3){\n            return ;\n        }else{\n            window.alert(\"Are you sure you want to go deeper?\");\n            window.alert(\"Okay then just click and follow alice down the rabbithole... I warned you though!\");\n            interact3 = true;\n        }\n    }\n\n    var interact4 = false;\n    function secretEnd (){\n        window.location.replace(\"/articles/article_02.html\");\n    }\n    //js refrences used:\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window/alert\n    //https://www.w3schools.com/jsref/met_win_moveto.asp\n    //https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event\n    //https://www.w3schools.com/jsref/met_loc_replace.asp\n\n    // code to support from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random\n    function getRandomInt(max) {\n        return Math.floor(Math.random() * max);\n    }"
   },
   {
-    "objectID": "posts/2023-11-16/secrethint.html",
-    "href": "posts/2023-11-16/secrethint.html",
-    "title": "Lost Article: cannot find:",
-    "section": "",
-    "text": "Recently, I updated my 404 page, but I have inturn lost my article about creating links and windows. I don’t know where it has gone."
-  },
-  {
-    "objectID": "posts/2023-11-9-Jinxbby/JinxThebby.html",
-    "href": "posts/2023-11-9-Jinxbby/JinxThebby.html",
-    "title": "Posts of my Cat Jinx:",
-    "section": "",
-    "text": "This is an image of Jinx Marble, my cat and she loves to take naps on me. I swear she is a velcro cat."
-  },
-  {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "The Spooky Blog:",
     "section": "",
-    "text": "Posts of my Cat Jinx:\n\n\n\n\n\n\n\nanimal\n\n\npersonal\n\n\n\n\nJinx Marble my little cute gremlin of a cat.\n\n\n\n\n\n\nChristara Laing\n\n\n\n\n\n\n  \n\n\n\n\nLost Article: cannot find:\n\n\n\n\n\n\n\nsecret\n\n\npersonal\n\n\nhelp\n\n\nmissing\n\n\n\n\nThis is about a lost article I cannot find.\n\n\n\n\n\n\nChristara Laing\n\n\n\n\n\n\nNo matching items"
+    "text": "Kant and Lying to the Drunk Friend Senario\n\n\n\n\n\n\n\nessay\n\n\nenglish\n\n\nkant\n\n\nlying\n\n\ndrunk\n\n\n\n\nThis is an essay I did for my old english class\n\n\n\n\n\n\nNov 28, 2023\n\n\nChristara Laing\n\n\n\n\n\n\n  \n\n\n\n\nLost Article: cannot find\n\n\n\n\n\n\n\nsecret\n\n\npersonal\n\n\nhelp\n\n\nmissing\n\n\n\n\nThis is about a lost article I cannot find.\n\n\n\n\n\n\nNov 16, 2023\n\n\nChristara Laing\n\n\n\n\n\n\n  \n\n\n\n\nPost about my Cat Jinx\n\n\n\n\n\n\n\nanimal\n\n\npersonal\n\n\n\n\nJinx Marble my Little Cute Gremlin Of A Cat.\n\n\n\n\n\n\nNov 9, 2023\n\n\nChristara Laing\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2023-11-9-Jinxbby/JinxThebby.html",
+    "href": "posts/2023-11-9-Jinxbby/JinxThebby.html",
+    "title": "Post about my Cat Jinx",
+    "section": "",
+    "text": "She was actually an abandoned kitten outside of the dorm; I was living in. She wasn’t heavy at all and was super skinny. She was in a box with a wet towel on her and a bowl of milk and bread. Jinx was supper lovable though, she loved on me when I approched the side door. She didn’t show any signs of being “spicy”.\nShe did have fleas at that time though. So I had to take her into the showers and give her a bath with dawn dishsoap which she did not like. And then I had to drive to Dollar General on my scooter and grab some flea and tick prevetion as well as a thin comb to get the rest off.\nI then had to take her off of the campus and my grandmother then took care of her for while as I got ESA regestration for her."
+  },
+  {
+    "objectID": "posts/2023-11-9-Jinxbby/JinxThebby.html#her-story",
+    "href": "posts/2023-11-9-Jinxbby/JinxThebby.html#her-story",
+    "title": "Post about my Cat Jinx",
+    "section": "",
+    "text": "She was actually an abandoned kitten outside of the dorm; I was living in. She wasn’t heavy at all and was super skinny. She was in a box with a wet towel on her and a bowl of milk and bread. Jinx was supper lovable though, she loved on me when I approched the side door. She didn’t show any signs of being “spicy”.\nShe did have fleas at that time though. So I had to take her into the showers and give her a bath with dawn dishsoap which she did not like. And then I had to drive to Dollar General on my scooter and grab some flea and tick prevetion as well as a thin comb to get the rest off.\nI then had to take her off of the campus and my grandmother then took care of her for while as I got ESA regestration for her."
+  },
+  {
+    "objectID": "posts/2023-11-9-Jinxbby/JinxThebby.html#esa-regestration",
+    "href": "posts/2023-11-9-Jinxbby/JinxThebby.html#esa-regestration",
+    "title": "Post about my Cat Jinx",
+    "section": "ESA Regestration:",
+    "text": "ESA Regestration:\nHer ESA registaration was not easy but she did alot to help me emotionally. And I was also wanting an ESA as well. She had to get all her shots and had to have her collar and tags. It took awhile for all of it to come in and get done but It took long enough to get it all done for her. She stayed at my grandmother’s until it all went through. I think she stayed there for about 7 weeks in total as we waited for the conformation about her ESA status.\n\nGoing to the Vet:\nFirst was going to the vet though. At the vet she got her annual shots and The vet also informed me that she was ~5 months at the time. I couldn’t belive it especially sense she weighed only ~4lbs at the time. She did really well at the vet other than the interation where she hissed at a dog.\nThey told me she had not been spayed as well so we had to go get her spayed soon. I thought it was going to be too much, but my roommate was a great help as they told me, “The Humane Society gives out flyers that will allow her to get spayed for cheeper.” So that day I went down and got a spay voucher and even got her microchiped for ~$37 usd. That helped so much.\nI had to wait a long time for the Humane Society to make the appointment for me. But, the time they made it for was for Novmber 22 at 8:00am. The start of my Thanksgiving break. So she got spayed before Thanksgiving. I don’t think that is something to be thankful about though."
+  },
+  {
+    "objectID": "posts/2023-11-9-Jinxbby/JinxThebby.html#images-of-jinx",
+    "href": "posts/2023-11-9-Jinxbby/JinxThebby.html#images-of-jinx",
+    "title": "Post about my Cat Jinx",
+    "section": "Images of Jinx:",
+    "text": "Images of Jinx:"
+  },
+  {
+    "objectID": "posts/2023-11-16/secrethint.html",
+    "href": "posts/2023-11-16/secrethint.html",
+    "title": "Lost Article: cannot find",
+    "section": "",
+    "text": "Recently, I updated my 404 page, but I have inturn lost my article about creating links and windows. I don’t know where it has gone.\nThe article was about how I learned to create links to diffrent articles through JS code and I wanted to make a silly easter egg in the 404 page with it"
+  },
+  {
+    "objectID": "posts/2023-11-28-/englishessay.html",
+    "href": "posts/2023-11-28-/englishessay.html",
+    "title": "Kant and Lying to the Drunk Friend Senario",
+    "section": "",
+    "text": "Christara Laing Dr. Shelly Johnson Ethics September 1, 2023"
+  },
+  {
+    "objectID": "posts/2023-11-28-/englishessay.html#kant-and-lying-to-the-drunk-friend-scenario",
+    "href": "posts/2023-11-28-/englishessay.html#kant-and-lying-to-the-drunk-friend-scenario",
+    "title": "Kant and Lying to the Drunk Friend Senario",
+    "section": "Kant and Lying to the Drunk Friend Scenario",
+    "text": "Kant and Lying to the Drunk Friend Scenario\n\nKant, a deontological moral philosopher, argues that the ground of morality is duty and obeying the categorical imperative (Kant 327). This imperative tells us that we should only act on the maxim we could will to be universal law (327). Another way of staying the categorical imperative is to say that we should treat people as an end in themselves and not just a means to our end (Kant 333). We can use Kant’s categorical imperative to help us understand the moral thing to do in situations like the Lying to the Drunk Friend Scenario. Kant would argue that the person in the Lying to the Drunk Friend Scenario (LDFS) is immoral but only due to the lie.\nTo understand why Kant would argue this, we must understand his moral theory. Firstly, morality isn’t grounded in empirical matters because morals are based on a priori reason and must be able to be applied universally to everyone and every situation. A priori reason is the knowledge we know from just reason alone (Kant 321-322). This a priori reason can also be used to understand the categorical imperative. The categorical imperative is the action is an end-in-itself (334). The categorical imperative tells us to only act on the maxim that we could will to be universal law (336). The categorical imperative can also be proven by the universality principle (“Kant & Categorical Imperatives: Crash Course Philosophy #35” 00:3:00–00:3:25). To quote Kant, “Act only according to that maxim which you can at the same time will that it should become a universal law without contradiction (qtd. in “Kant & Categorical Imperatives: Crash Course Philosophy #35” 00:3:00–00:3:25).” Dr. Johnson points out about Kant, “when we act morally, we have autonomy of the will– The will is a law unto itself (Kant 342)(Kant, Part #3 7)” . Autonomy through this quote is being able to act upon yourself through your own reasoning, without anything else, forcing you or forcing a law on you. If someone were to force a law on you or outside of you, then it’s heteronomy (Kant 342).\nWith all these things being said about Kant’s theory then what would Kant about the LDFS. The LDFS presents a scenario where you are given a gun by your friend. After a while your friend comes back, drunk, and asks you to hand him the gun; as he wants to kill another friend, he had a fight with. Kant would say in this situation you could not lie. As the maximum of lying is unable to be universalized. Which intern goes against Kants theory of universality.\nA specific example that Kant uses about lying is (Kant & Categorical Imperatives: Crash Course Philosophy #35 00:5:01- 00:10:27) . If Elvira lies to the killer about where Tony is, Tony could be around the corner at the same time the killer decides to leave. This would have her responsible for Tony’s death. If she told the truth, then only the murderer would’ve been responsible for the deaths that occurred. The reason is she cannot control what the murderer does. She can only control what she does in the situation.\nBut if you give your friend the gun, then that Maxim would be giving your friend a gun. Which would allow them to murder someone meaning that guilt would be on you. So can’t would probably say in the situation that the best thing to do would be to not lie, but tell your friend, I am not giving you the gun because you’re drunk and also no matter what don’t give your friend the gun."
+  },
+  {
+    "objectID": "posts/2023-11-28-/englishessay.html#works-cited",
+    "href": "posts/2023-11-28-/englishessay.html#works-cited",
+    "title": "Kant and Lying to the Drunk Friend Senario",
+    "section": "Works Cited:",
+    "text": "Works Cited:\n“Kant & Categorical Imperatives: Crash Course Philosophy #35.” Www.youtube.com, www.youtube.com/watch?v=8bIys6JoEDw&t=371s. Accessed 18 Sept. 2023.\nDr. Johnson, Shelly. “Kant, Part #3.pptx.” Kant, Part #3.pptx, 2003, georgetowncollege.instructure.com/courses/5574/files/1033310?module_item_id=276642. Accessed 19 Sept. 2023.\nKant, Immanuel. “Groundwork for the Metaphysics of Morals.” Ethics, by Steven Cahn and Peter Markie, 198 Madison Avenue, New York, NY 10016, United States of America, Oxford University Press, 2019, pp. 320–336."
   },
   {
     "objectID": "articles/article_01.html",
@@ -56,25 +98,25 @@
     "text": "In this problem you have to make a function called reverseArray which takes one argument array.\nThe array must be reversed like the examples below:\n\nhello = ['0', 'l', 'l', 'e', 'H'];\nreverseArray(hello);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlick = ['k', 'c', 'i', 'l'];\nreverseArray(lick);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart by making the empty function called reverseArray(array):\nfunction reverseArray(array){\n\n}\n\n\n\nMake a for() loop:\n\n\nlet num = 0: the index and what number it starts at\n\n0: because arrays in Javascript start at 0 not 1\n\n\n\n\n\nnum &lt;= array.length - 1: the condition that needs to be met or else the for loop ends\n\n&lt;=: means less than or equal to\narray.length: gets length of array\n\n-1: because array starts at 0 so the last index of the array is 1 less than array.length\n\n\n\n\n\n\nnum += 1: the amount num incresses by after each loop\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n      }\n}\n\n\n\n\n.pop(): a function that returns the last value in the array given; also removes the last value in the array\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n        return(\"index: \" + (array.length - num) + \"value : \" + array.pop())\n      }\n}\n\n// results of pop:\nbuck = ['k', 'c', 'u', 'b'];\nreverseArray(buck);\n\nfunction checkPop(array){\n  let results = [];\n  var i = array.length - 1\n      for(let n = 0; n &lt;= array.length + 2; n += 1){\n        results[n] = \"index: \" + (i) + \" value : \" + array.pop();\n        i -= 1;\n      }\n  return(results);\n}\nbuck = ['k', 'c', 'u', 'b'];\ncheckPop(buck);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.splice: splices an array at a certain index in a given array.\n\nnum: where the splice starts at\n0: how many gets deleted, in this case none are deleated\n\n.pop: already deletes the one at the ends of the array\n\narray.pop(): removes value from end of array; in the area where the value to be added is\n\n\n\n\nfunction reverseArray(array){\n      for(let num = 0; num &lt;= array.length - 1; num += 1){\n          array.splice(num, 0, array.pop());\n      }\n      return array;\n  }\n\n\n\n\n\n\n\nreverseArray(['0', 'l', 'l', 'e', 'H']);\n\n\n\n\n\n\n\nreverseArray(['k', 'c', 'i', 'l'])\n\n\n\n\n\n\n\nreverseArray(['s','i','s', 'o', 'i', 'n', 'o', 'c', 'o', 'n', 'a', 'c', 'l', 'o', 'v', 'o', 'c', 'i', 'l', 'i', 's', 'c', 'i', 'p', 'o', 'c', 's', 'o', 'r', 'c', 'i', 'm', 'a', 'r', 't', 'l', 'u', 'o', 'n', 'o', 'm', 'u', 'e', 'n', 'P']);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInput\n\n\nOutput\n\n\n\n\n[l,i,c,k]\n\n\n[k,c,i,l]\n\n\n\n\n\nClick For Prompt"
   },
   {
-    "objectID": "articles/GC_calender/article_3Cal_01.html#day",
-    "href": "articles/GC_calender/article_3Cal_01.html#day",
+    "objectID": "articles/GC_calender/index.html",
+    "href": "articles/GC_calender/index.html",
     "title": "Georgetown College Calender Suggestion",
-    "section": "Day",
-    "text": "Day\n\ncalendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, view = \"day\", defaultDate = \"2023-10-30\") %&gt;% \n  cal_props(cal_gc_props()) %&gt;% \n  cal_week_options(scheduleView = FALSE)\n\n\n\n\n\nToday"
+    "section": "",
+    "text": "monthWeekDay\n\n\n\n\n\n\n\n\nToday\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nToday\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nToday"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me:",
     "section": "",
-    "text": "Hello, I’m Christara. A student in CSC 324, who is minoring in computer science and majoring in art."
+    "text": "I am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play. I also love hiding secrets."
   },
   {
     "objectID": "about.html#early-life",
     "href": "about.html#early-life",
     "title": "About Me:",
-    "section": "Early life:",
-    "text": "Early life:\nI am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play. I also love hiding secrets."
+    "section": "",
+    "text": "I am a Kentucky born citizen, to be exact I born in Paris, Kentucky. From an early age I have always been intrested in coding. This is because my grandpa, worked with robots and helped fix their coding for NSG. I also was intrested in it because I played a lot of indie horror games. And I got to watch those games be coded up for others to play. I also love hiding secrets."
   },
   {
     "objectID": "about.html#studies",

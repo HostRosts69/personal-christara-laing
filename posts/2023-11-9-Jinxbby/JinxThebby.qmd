@@ -1,9 +1,51 @@
 ---
-title: "Posts of my Cat Jinx:"
-description: "Jinx Marble my little cute gremlin of a cat."
+title: "Post about my Cat Jinx"
+description: "Jinx Marble my Little Cute Gremlin Of A Cat."
 author:
     - name: Christara Laing
 categories: [animal, personal]
+date: 11/9/2023
 ---
+<style>
+.quarto-title {
+    font-family: Fantasy;
+}
+h2, h3 {
+    font-family: Fantasy;
+    font-size: 160%;
+}
 
-This is an image of Jinx Marble, my cat and she loves to take naps on me. I swear she is a velcro cat.
+table{
+    border: 6px solid #E18013;
+}
+</style>
+## Her story:
+<p><img align="right" src="assets/jinx_1st_day.webp" alt="Jinx's First Day Photo" width=40% class = "image"></img> She was actually an abandoned kitten outside of the dorm; I was living in. She wasn't heavy at all and was super skinny. She was in a box with a wet towel on her and a bowl of milk and bread. Jinx was supper lovable though, she loved on me when I approched the side door. She didn't show any signs of being "spicy".
+
+She did have fleas at that time though. So I had to take her into the showers and give her a bath with dawn dishsoap which she did not like. And then I had to drive to Dollar General on my scooter and grab some flea and tick prevetion as well as a thin comb to get the rest off.
+
+I then had to take her off of the campus and my grandmother then took care of her for while as I got ESA regestration for her.
+
+## ESA Regestration:
+Her ESA registaration was not easy but she did alot to help me emotionally. And I was also wanting an ESA as well. She had to get all her shots and had to have her collar and tags.<img align="left" src="assets/jinxeepy.webp" alt="Jinx " width=40%></img> It took awhile for all of it to come in and get done but It took long enough to get it all done for her. She stayed at my grandmother's until it all went through. I think she stayed there for about 7 weeks in total as we waited for the conformation about her ESA status.
+
+### Going to the Vet:
+First was going to the vet though. At the vet she got her annual shots and The vet also informed me that she was ~5 months at the time. I couldn't belive it especially sense she weighed only ~4lbs at the time. She did really well at the vet other than the interation where she hissed at a dog.
+
+They told me she had not been spayed as well so we had to go get her spayed soon. I thought it was going to be too much, but my roommate was a great help as they told me, "The Humane Society gives out flyers that will allow her to get spayed for cheeper." So that day I went down and got a spay voucher and even got her microchiped for ~$37 usd. That helped so much. 
+
+I had to wait a long time for the Humane Society to make the appointment for me. But, the time they made it for was for Novmber 22 at 8:00am. The start of my Thanksgiving break. So she got spayed before Thanksgiving. I don't think that is something to be thankful about though.</p>
+
+## Images of Jinx:
+<div>
+<table>
+<tr>
+    <td><img src="assets/jinx_1st_day.webp" alt="Jinx's First Day Photo" width=100%></img></td>
+    <td><img src="assets/jinxeepy.webp" alt="Jinx's First Day Photo" width=100%></img></td>
+</tr>
+
+<tr>
+<td><img src="assets/play_jinx.webp" alt="Jinx's First Day Photo" width=100%></img></td>
+<td><img src="assets/catnip_jinx.webp" alt="Jinx's First Day Photo" width=100%></img></td>
+</tr>
+</div>

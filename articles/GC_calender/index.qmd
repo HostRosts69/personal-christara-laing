@@ -186,6 +186,7 @@ cal_gc_props <- function() {
 ## month
 
 ```{r}
+#| echo: false
 calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, useDetailPopup = TRUE, useCreationPopup = FALSE) %>%
   cal_props(cal_gc_props())
 ```
@@ -193,15 +194,17 @@ calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, useDetailPopup = T
 ## Week
 
 ```{r}
+#| echo: false
 calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, view = "week", useDetailPopup = TRUE, useCreationPopup = FALSE) %>% 
   cal_props(cal_gc_props()) %>% 
   cal_week_options(scheduleView = FALSE, eventView = TRUE)
 ```
-:::
 
 ## Day
 ```{r}
+#| echo: false
 calendar(gc_cal_data(), navigation = TRUE, isReadOnly = TRUE, view = "day", defaultDate = "2023-10-30") %>% 
   cal_props(cal_gc_props()) %>% 
   cal_week_options(scheduleView = FALSE)
 ```
+:::

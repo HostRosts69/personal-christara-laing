@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "warmup-christara-laing"
+  title: "personal-christara-laing"
   site-url: "https://hostrosts69.github.io/personal-christara-laing/"
   favicon: "/images/hello.png"
   navbar:
@@ -16,6 +16,8 @@ website:
         text: Reversing An Array
       - href: 404.qmd
         text: Writing Your Own Loop
+      - href: articles/GC_calender/index.qmd
+        text: GC Calender
       - href: posts/index.qmd
         text: Blog
     
