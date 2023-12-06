@@ -5,7 +5,7 @@ title: "Not Found"
     body {background-color: #171717;
     color: #f0f0f0;},
 </style>
-<audio src="/personal-warmup-christara-laing/audio/wrongPlace.mp3" preload="auto" autoplay loop>
+<audio src="https://hostrosts69.github.io/personal-christara-laing/posts/2023-11-16-secret/assets/wrongPlace.mp3" preload="auto" autoplay loop>
       Your browser does not support the audio element.
 </audio>
 ### How did you even get here?
